@@ -1,0 +1,254 @@
+.Home{
+  //
+  .Case_study{
+
+    .content{
+      max-width: 1350px;
+    margin:0 auto;
+    padding:60px 20px;
+    display: table;
+
+    }
+
+    h3{
+      color:#4559a7;
+      font-family: "Nudista";
+      font-size:32px;
+      text-align:center;
+    letter-spacing: 1px;
+    }
+
+    a{
+      background: linear-gradient(90deg, #374680 17%, #6688b2 50%, #53b3aa 88%);
+      color:#fff;
+      font-size: 12px;
+      font-family: "Nudista";
+      padding: 5px 35px;
+      border-radius: 6px;
+      border-color: #4559A7;
+      margin:0 auto;
+      display: table;
+      letter-spacing: 2px;
+      margin: 20px auto 25px ;
+
+    }
+    
+    
+    p{
+      color:#323031;
+      font-style: italic;
+      font-family: "Nudista";
+      font-size: 16px;
+      max-width:700px;
+      margin: 0 auto;
+      text-align:center;
+     
+
+    }
+
+  }
+
+  //work
+
+  .Work{
+
+    background-image: url('../../../images/product/laptoplayer.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0% 22%;
+ .content{
+    max-width: 1350px;
+    margin:0 auto;
+    padding:100px 20px;
+    display: table;
+ }
+  
+.laptop{
+
+  margin:0px 70px 70px
+}
+
+  h3{
+    color:#4559a7;
+    font-family: "Nudista";
+    font-size:32px;
+    text-align:center;
+  letter-spacing: 1px;
+
+  }
+
+  p{
+    font-family: 'Roboto', sans-serif;
+    color:#4c4c4d;
+  
+   font-weight: 500;
+    font-size: 16px;
+    max-width:700px;
+    margin: 20px auto 40px;
+    text-align:center;
+   
+
+  }
+
+  .featured{
+
+    img{
+      padding: 10px;
+    }
+   
+
+    h4{
+
+      color:#4559a7;
+      font-family: "Nudista";
+      text-align: center;
+      font-size: 28px;
+      padding-top: 22px;
+    }
+
+    p{
+
+      color:#535353;
+      font-family: 'Roboto', sans-serif;
+      padding: 20px 50px 0px ;
+      font-weight: 500;
+      margin:0px
+
+    }
+    a{
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color:#4559a7;
+      font-weight: 700;
+      justify-content:flex-end;
+    }
+
+    .Features .autocontent{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 170px;
+  
+
+    }
+  }
+
+
+  
+
+
+}
+
+//
+.Addon{
+  .content{
+
+    max-width: 1350px;
+    margin:0 auto;
+    padding:70px 0px;
+    display: table;
+
+  }
+
+  .box{
+    background-color: white;
+    box-shadow: 0 5px 20px -2px rgba(0, 0, 0, 0.1);
+    padding: 55px 30px;
+    text-align: center;
+    margin:0px 35px;
+    min-height: 320px;
+    &:first-child{
+      margin-left:0px
+        }
+  
+  }
+
+  img{
+width:90px
+  }
+ 
+  h2{
+
+    font-family: 'Roboto', sans-serif;
+    color:#4559a7  !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    padding-top: 35px;
+  
+    text-shadow: none !important;
+    font-size: 18px;
+
+  
+  
+  }
+
+  p{
+    color:#535353;
+    font-family: 'Roboto', sans-serif;
+  
+    font-size: 16px;
+  font-weight: 500;
+    margin: 0 auto;
+    text-align:center;
+  
+   
+
+  }
+
+
+}
+
+//HEADER{
+
+.HEADER
+{
+
+
+ .gatsby-background-image-wrapper{
+
+
+  padding: 62px 0px;
+
+  .contentinner
+ {
+   max-width: 1350px;
+
+   margin: 0 auto;
+   position: relative;
+   top: 155px;
+   padding: 0px 20px;
+ 
+
+  
+
+
+  
+  h1{
+    font-size: 55px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color:#fff;
+    font-family: "Nudista";
+    text-shadow: 3px 3px 3px #031b79;
+    &:nth-of-type(2){
+      padding-bottom: 20px;
+    }
+  }
+  h2{
+
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+  
+    color:#fff;
+    font-weight: 400;
+    line-height: 20px;
+    text-shadow: 3px 3px 3px #031b79;
+  }
+
+}
+ }
+}
+
+
+
+}

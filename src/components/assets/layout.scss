@@ -1,0 +1,156 @@
+html,body{
+  font-family: 'Roboto', sans-serif;
+  margin:0
+}
+
+
+//footer
+.Footer{
+
+
+background-color:#333333 ;
+
+.content{
+   max-width: 1300px;
+  padding:100px 20px 90px;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  @media(max-width:776px){
+
+  }
+
+
+  ul{
+    margin:0;
+    padding: 0px;
+    li{
+      display: inline;
+
+     a{
+      color:#fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-right: 10px;
+      letter-spacing: .5px;
+      line-height: 32px;
+
+      &:after{
+        content:"|";
+        padding-left:10px
+      }
+      
+    }
+    &:last-child{
+      a:after{
+      content:""
+    }
+    }
+  }
+
+  }
+
+
+  span{
+    color:#fff;
+    padding-top: 30px;
+    display: block;
+    line-height: 22px;
+    a{
+
+      color:#fff;
+      text-decoration:none;
+      font-weight: bold;
+
+    }
+  }
+
+    .social-images{
+            img{
+          max-width: 40px;
+          height:40px;
+          margin-left:30px
+            }
+          }
+
+    
+    
+
+  @media(max-width:767px){
+    flex-direction: column;
+    padding:100px 30px 90px;
+    .social-images{
+      display: flex;
+      justify-content: left;
+      margin-top:50px;
+      img{
+        margin-left:0;
+        margin-right:20px
+      }
+    }
+  }
+
+
+
+}
+}
+
+
+//Navigation
+
+.Navigation{
+  background-color:#fff ;
+  padding: 10px 20px;
+
+  img{
+ 
+    width: 200px;
+
+
+  }
+
+  .navbar-nav{
+    flex-basis: 100%;
+    justify-content: flex-end;
+    a{
+      font-size: 15px;
+      color:#4c4d4d;
+      text-transform: uppercase;
+      margin-left: 35px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      padding-top: 5px;
+
+
+    }
+
+    .chat-button{
+
+    color:#445aa8;
+    border-radius: 6px;
+    border-color: #4559A7;
+    padding: 2px 50px;
+    border: 2px solid #4559A7;
+    font-family: "Nudista";
+
+    }
+
+    #demo-button{
+      border-radius: 6px;
+      border-color: #4559A7;
+      padding: 5px 50px 1px;
+      color:#fff;
+      font-family: "Nudista";
+      
+      background: linear-gradient(90deg, rgb(55, 70, 128) 17%, rgb(102, 136, 178) 50%, rgb(83, 179, 170) 88%);
+    
+
+
+    }
+  }
+
+}
+
+
