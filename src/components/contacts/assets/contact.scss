@@ -1,0 +1,38 @@
+.Contactus{
+background-color: #fafafa;
+
+  .content{
+    max-width:1170px;
+    margin:0 auto;
+    padding: 20px 20px 100px;
+
+  }
+  label{
+    color:#6c6d6e;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0px;
+
+  }
+  button{
+    text-transform: uppercase;
+    width:100%;
+    background-color: #4559a7;
+    font-family: "Nudista";
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+
+
+  }
+
+  h1{
+  text-align: center;  
+  color: #4559a7;
+    font-family: "Nudista";
+    font-size: 32px;
+    padding-top: 22px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+  }
+  
+}

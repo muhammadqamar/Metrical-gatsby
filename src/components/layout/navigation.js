@@ -44,7 +44,7 @@ export default function  Navigation(){
     <div className="Navigation">
       <div className="Content">
       <Navbar expand="lg">
-  <Navbar.Brand href="#home"><img src={logo} /></Navbar.Brand>
+  <Navbar.Brand href="#home"><Link to="./"><img src={logo}></img></Link></Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
@@ -52,7 +52,7 @@ export default function  Navigation(){
 
       return(   
 
-      <Link to={data.link} className={data.link=="chat"?"chat-button":null}
+      <Link to={"./"+data.link} className={data.link=="chat"?"chat-button":null}
       id={data.link=="demo"?"demo-button":null}
       >{data.name}</Link> 
          
@@ -70,7 +70,7 @@ return(
   <>
 {data.link=='demo'?
 <Link to={data.link} 
-id={"demo-button"}
+className={"demo-button"}
 >{data.name}</Link> 
 :null}
 </>

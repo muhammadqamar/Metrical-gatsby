@@ -105,7 +105,7 @@ return (
              </Row>
          <div className="featured">
            <Row>
-         <Col sm={12} md={4}>
+         <Col sm={12} md={12} lg={4}>
          <Featured eng_img={data.engajment.childImageSharp.fluid}
          eng_tile={eng_tile}
          eng_des={ eng_des}
@@ -113,14 +113,14 @@ return (
          
          />
            </Col>
-           <Col sm={12} md={4}>
+           <Col sm={12} md={12} lg={4}>
            <Featured eng_img={data.insights.childImageSharp.fluid} 
                  eng_tile={ins_tile}
                  eng_des={ ins_des}
                  eng_link={ins_link}
                  />
            </Col>
-           <Col sm={12} md={4}>
+           <Col sm={12} md={12} lg={4}>
            <Featured eng_img={data.experience.childImageSharp.fluid}
            
            eng_tile={exp_tile}

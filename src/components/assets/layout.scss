@@ -1,5 +1,5 @@
 html,body{
-  font-family: 'Roboto', sans-serif;
+ 
   margin:0
 }
 
@@ -12,7 +12,7 @@ background-color:#333333 ;
 
 .content{
    max-width: 1300px;
-  padding:100px 20px 90px;
+  padding:60px 20px 50px;
   margin:0 auto;
   display: flex;
   justify-content: space-between;
@@ -30,12 +30,13 @@ background-color:#333333 ;
 
      a{
       color:#fff;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
       text-decoration: none;
       padding-right: 10px;
       letter-spacing: .5px;
       line-height: 32px;
+      font-family: 'Roboto', sans-serif;
 
       &:after{
         content:"|";
@@ -62,14 +63,14 @@ background-color:#333333 ;
 
       color:#fff;
       text-decoration:none;
-      font-weight: bold;
+    
 
     }
   }
 
     .social-images{
             img{
-          max-width: 40px;
+          max-width: 50px;
           height:40px;
           margin-left:30px
             }
@@ -102,13 +103,25 @@ background-color:#333333 ;
 
 .Navigation{
   background-color:#fff ;
-  padding: 10px 20px;
+  padding: 0px 20px;
+
+
 
   img{
  
-    width: 200px;
+    width: 235px;
 
 
+  }
+  @media (max-width:991px){
+    padding: 0px 0px;
+    
+  img{
+ 
+    width: 170px;
+
+
+  }
   }
 
   .navbar-nav{
@@ -122,6 +135,8 @@ background-color:#333333 ;
       font-family: 'Roboto', sans-serif;
       font-weight: 500;
       padding-top: 5px;
+      white-space: nowrap;
+    
 
 
     }
@@ -131,24 +146,81 @@ background-color:#333333 ;
     color:#445aa8;
     border-radius: 6px;
     border-color: #4559A7;
-    padding: 2px 50px;
+
     border: 2px solid #4559A7;
     font-family: "Nudista";
+    height:35px;
+      width:130px;
+      text-align: center;
+      margin-top: -4px;
 
     }
 
     #demo-button{
       border-radius: 6px;
       border-color: #4559A7;
-      padding: 5px 50px 1px;
+     
       color:#fff;
       font-family: "Nudista";
+      height:35px;
+      width:130px;
+      text-align: center;
+      margin-top: -4px;
       
       background: linear-gradient(90deg, rgb(55, 70, 128) 17%, rgb(102, 136, 178) 50%, rgb(83, 179, 170) 88%);
     
 
 
     }
+  }
+
+  .demo-button{
+    display: none;
+  }
+  @media (max-width:991px){
+    
+    .demo-button{
+      display: block;
+      border-radius: 6px;
+      border-color: #4559A7;
+      padding: 2px 50px 2px;
+      color: #fff;
+      font-family: "Nudista";
+      width:100%;
+      background: linear-gradient(90deg, #374680 17%, #6688b2 50%, #53b3aa 88%);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .navbar-nav a{
+      margin-left:0;
+      margin-bottom: 0px;
+    }
+    .chat-button{
+      margin:10px 0px 12px !important;
+    }
+
+    .navbar-collapse{
+    border-bottom: 1px solid #ddd;
+    }
+    #demo-button{
+      display: none;
+    }
+    .navbar-toggler-icon{
+      background-image: url(../../images/icons/BurgerMenu.png) !important;
+      width:2em
+    
+
+    }
+    .navbar-toggler{
+      border:none
+    }
+
+    
+    
+
+    
+
   }
 
 }

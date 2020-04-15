@@ -41,7 +41,7 @@ const BackgroundSection = ({ className }) => (
         >
              <div className="contentinner">
               <h1>Artificial Intelligence.</h1>
-              <h1>Real revenue</h1><br />
+              <h1>Real revenue.</h1><br />
               <h2>Smart targeting and real-time customer</h2>
               <h2>engagement give you edge you need.</h2>
               <Addon />
