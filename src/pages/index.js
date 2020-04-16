@@ -4,6 +4,7 @@ import SEO from "../components/layout/seo"
 import Home from "../components/home/."
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Index(){
+  
  return(
     <Layout>
     <SEO title="Home" />

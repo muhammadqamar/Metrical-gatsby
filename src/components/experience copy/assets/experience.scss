@@ -1,0 +1,95 @@
+.Experience{
+  padding-bottom: 60px;
+
+//Experience_header
+  .relativepath{
+    position: relative;
+  }
+  
+ 
+
+  .playbutton{
+    background: #ffffffba;
+    padding:34px;
+
+    border-radius: 50%;
+    height:120px;
+    width:120px;
+    text-align: center;
+    position: absolute;
+    top:35%;
+    left:50%;
+    transform: translate(-50%);
+    cursor: pointer;
+
+    img{
+      width:40px;
+      margin: 0 auto;
+      display: table;
+      margin-left: 15px;
+    }
+
+    
+  }
+  .box{
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    
+    h1{
+
+      color: #4559a7;
+    font-family: "Nudista";
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    };
+
+    p{
+
+      color: #535353;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 900px;
+      padding-top: 25px;
+    }
+
+
+    
+  }
+
+
+  @media (max-width:767px){
+    .playbutton{
+      background: #ffffffba;
+     
+      height:80px;
+      width:80px;
+      padding-top: 19px;
+    
+      top:25%;
+     
+  
+  
+      img{
+        width:30px;
+        margin: 0 auto;
+        display: table;
+        margin-left: -4px;
+     
+      }
+  
+      
+    }
+    h1{
+      font-size: 29px !important;
+    }
+  }
+
+
+}

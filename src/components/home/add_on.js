@@ -6,24 +6,20 @@ import video from "../../images/icons/icons_basketball.png"
 import case_study from "../../images/icons/icons_shopping cart.png"
 import chevron from "../../images/icons/chevronright.png"
 import angledown from "../../images/icons/angledown.png"
-export default function  Addon(){
+export default function  Addon({
 
-   var data_demo={
-        title:"GET DEMO",
-   
-        description:"Add to your e-commerce platform's app store in one click."
-    }
-    var data_video={
-        title:"WATCH VIDEO ",
-   
-        description:"See how we can Increase conversion and reduce cart abandonment"
-    }
+    data_demo_title,
+    data_demo_description,
+    data_video_title,
+    data_video_description,
+    data_case_study_title,
+    data_case_study_description,
+  
 
-    var data_case_study={
-        title:"VIEW CASE STUDY",
+}){
+
+ 
    
-        description:"How did we take a premium sporting goods retailer to new heights."
-    }
 
 
     return(
@@ -35,10 +31,10 @@ export default function  Addon(){
                     <Col xs={6} sm={6} md={4}>
                         <div className="box">
                         <img src={demo} />
-                        <h2>{data_demo.title}
+                        <h2>{data_demo_title}
                         <img src={chevron} className="arrow" />
                         </h2>
-                        <p>{data_demo.description}</p>
+                        <p>{data_demo_description}</p>
                         </div>
 
 
@@ -47,9 +43,9 @@ export default function  Addon(){
                     <Col xs={6} sm={6} md={4}>
                     <div className="box">
                         <img src={video} />
-                        <h2>{data_video.title}
+                        <h2>{data_video_title}
                         <img src={chevron} className="arrow" /></h2>
-                        <p>{data_video.description}</p>
+                        <p>{data_video_description}</p>
                         </div>
 
 
@@ -58,10 +54,10 @@ export default function  Addon(){
                     <Col xs={6} sm={6} md={4}>
                     <div className="box">
                         <img src={case_study} />
-                        <h2>{data_case_study.title}
+                        <h2>{data_case_study_title}
                         <img src={chevron} className="arrow" />
                         </h2>
-                        <p>{data_case_study.description}
+                        <p>{data_case_study_description}
                         
                         </p>
                         </div>
@@ -71,7 +67,7 @@ export default function  Addon(){
                     <Col xs={6} sm={6} md={4}>
                     <div className="mobile-work">
                         How it<br /> works<img src={angledown}/>
-                        </div>
+                    </div>
                        
 
 

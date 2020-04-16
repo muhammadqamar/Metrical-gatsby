@@ -1,23 +1,50 @@
 import React from "react"
-
 import { graphql, StaticQuery } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
 import Addon from "./add_on"
 
-const Header = () => {
+const Header = ({
+  heading1,
+  heading2,
+  sub_heading1,
+  sub_heading2,
+  data_demo_title,
+  data_demo_description,
+  data_video_title,
+  data_video_description,
+  data_case_study_title,
+  data_case_study_description
 
-  return (
-    <BackgroundSection  />
-     
- 
-  )
+}) => {
+
+  return (<BackgroundSection
+    heading1={heading1}
+    heading2={heading2}
+    sub_heading1={sub_heading1}
+    sub_heading2={sub_heading2}
+    data_demo_title={data_demo_title}
+    data_demo_description ={ data_demo_description}
+    data_video_title={data_video_title}
+    data_video_description={data_video_description}
+    data_case_study_title={data_case_study_title}
+    data_case_study_description={data_case_study_description}
+   
+    />)
 }
-
 export default Header
 
-
-
-const BackgroundSection = ({ className }) => (
+const BackgroundSection = ({
+  heading1,
+  heading2,
+  sub_heading1,
+  sub_heading2,
+  data_demo_title,
+  data_demo_description,
+  data_video_title,
+  data_video_description,
+  data_case_study_title,
+  data_case_study_description
+ }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -28,24 +55,37 @@ const BackgroundSection = ({ className }) => (
             }
           }
         }
+       
       }
     `}
+ 
     render={data => {
+   
       // Set ImageData.
       const imageData = data.desktop.childImageSharp.fluid
       return (
         <BackgroundImage
-        
           fluid={imageData}
           backgroundColor={`#fff`}
         >
-             <div className="contentinner">
-              <h1>Artificial Intelligence.</h1>
-              <h1>Real revenue.</h1><br />
-              <h2>Smart targeting and real-time customer</h2>
-              <h2>engagement give you edge you need.</h2>
-              <Addon />
-              </div>
+        <div className="contentinner">
+
+        <h1>{heading1}</h1>
+        <h1>{heading2}</h1>
+      
+        <h2>{sub_heading1}</h2>
+        <h2>{sub_heading2}</h2>
+    
+        <Addon 
+         data_demo_title={data_demo_title}
+         data_demo_description ={data_demo_description}
+         data_video_title={data_video_title}
+         data_video_description={data_video_description}
+         data_case_study_title={data_case_study_title}
+         data_case_study_description={data_case_study_description}
+        
+        />
+        </div>
            
         </BackgroundImage>
       )

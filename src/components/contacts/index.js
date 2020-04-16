@@ -1,61 +1,24 @@
 import React from "react"
 import "./assets/contact.scss"
+import GoogleMapReact from 'google-map-react';
 
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
 import {Row,Col,Form,Button} from "react-bootstrap"
-
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 export default function  Contactus(){
-
+  var  defaultProps = {
+    center: {
+      lat: 59.95,
+      lng: 30.33
+    },
+    zoom: 11
+  };
     return(
 
 <div className="Contactus">
 
 <div className="content">
-    <Contactuspage />
-    </div>
-  
 
-   
-
-
-
-   
-
-           
-    </div>
-    )
-} 
-
-
-const Contactuspage = ({ className }) =>{
-       var title= "contact us" 
- return(
-
-    
-    <StaticQuery
-      query={graphql`
-        query {
-        
-
-          map: file(relativePath: { eq: "map.png" }) {
-            childImageSharp {
-              fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      `}
-      render={data => {
-        // Set ImageData.
-        const imageData = data.map.childImageSharp.fluid
-       
-    
-
-     return(
-         <>
-      <h1>{title}</h1>
+      <h1>Contact US</h1>
       <Row>
           
           <Col xs={12} sm={12} md={6}>
@@ -91,16 +54,35 @@ const Contactuspage = ({ className }) =>{
               </Col>
 
               <Col xs={12} sm={12} md={6}>
-              <Img fluid={imageData} />
+              <div style={{ height: '100%', width: '100%' }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: ""}}
+          defaultCenter={defaultProps.center}
+          defaultZoom={defaultProps.zoom}
+        >
+          <AnyReactComponent
+            lat={59.955413}
+            lng={30.337844}
+            text="My Marker"
+          />
+        </GoogleMapReact>
+      </div>
               </Col>
         
          </Row>
-         </>
-     )
-          
         
-      }}
-    />
-  )
-    }
+    </div>
+  
+
+   
+
+
+
+   
+
+           
+    </div>
+    )
+} 
+
 

@@ -1,86 +1,71 @@
-import React, { Component } from "react"
+import React from "react"
 import {Navbar, Nav} from "react-bootstrap"
 import logo from "../../images/logo/logo.png"
 import {Link} from "gatsby"
-
+import Demo from "./demo"
 
 export default function  Navigation(){
 
+var links=[{
+name:"solutions",
+link:"solutions"
 
-  var links=[{
-    name:"soltions",
-    link:"solutions"
+},
+{
+name:"why metrical",
+link:"why_metrical"
 
-  },
-  {
-    name:"why metrical",
-    link:"why_metrical"
+},
+{
+name:"company",
+link:"company"
 
-  },
-  {
-    name:"company",
-    link:"company"
+},
+{
+name:"contact",
+link:"contact"
 
-  },
-  {
-    name:"contact",
-    link:"contact"
+} ,  
+{
+name:"Chat",
+link:"chat"
 
-  } ,  
-  {
-    name:"Chat",
-    link:"chat"
+} , 
+{
+name:"demo",
+link:"demo"
 
-  } , 
-  {
-    name:"demo",
-    link:"demo"
-
-  } , 
+} , 
 
 ]
-    return(
+return(
 
-    <div className="Navigation">
-      <div className="Content">
-      <Navbar expand="lg">
-  <Navbar.Brand href="#home"><Link to="./"><img src={logo}></img></Link></Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="mr-auto">
-    {links.map(data=>{
+<div className="Navigation">
+<div className="Content">
+<Navbar expand="lg">
+<Navbar.Brand href="#home"><Link to="./"><img src={logo}></img></Link></Navbar.Brand>
+<Navbar.Toggle aria-controls="basic-navbar-nav" />
+<Navbar.Collapse id="basic-navbar-nav">
+<Nav className="mr-auto">
+{links.map(data=>{
 
-      return(   
-
-      <Link to={"./"+data.link} className={data.link=="chat"?"chat-button":null}
-      id={data.link=="demo"?"demo-button":null}
-      >{data.name}</Link> 
-         
-         )
-    })}
-  
-   
-
-    </Nav>
-  
-  </Navbar.Collapse>
-  {links.map(data=>{
-
-return(   
-  <>
-{data.link=='demo'?
-<Link to={data.link} 
-className={"demo-button"}
->{data.name}</Link> 
-:null}
+return(  
+<>
+{
+data.link==="demo"?<Demo text={"DEMO"} /> :<Link to={"./"+data.link} className={data.link=="chat"?"chat-button":null}>{data.name}</Link> 
+} 
 </>
-
-   
-   )
+)
 })}
+
+</Nav>
+
+</Navbar.Collapse>
+<Demo  text={"DEMO"}  />
+
 </Navbar>
-        </div>
-      </div>
-  )
-  
+</div>
+</div>
+)
+
 }

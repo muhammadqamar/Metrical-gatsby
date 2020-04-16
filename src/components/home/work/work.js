@@ -1,45 +1,57 @@
 import React from "react"
-
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Featured from "./fetures"
 import {Row, Col} from "react-bootstrap"
 
 
+const Work = ({
+  title,
+  description,
+  eng_tile,
+  eng_des,
+  eng_link, 
+  ins_tile,
+  ins_des,
+  ins_link,
+  exp_tile,
+  exp_des,
+  exp_link,
+}) => {
 
-const Work = () => {
-
-  return (
-      <>
-    <HowitWorks  />
-  
-    </>
-     
- 
-  )
+  return (<HowitWorks
+    title={title}
+    description={description}
+    eng_tile={eng_tile}
+    eng_des={eng_des}
+    eng_link={eng_link}
+    ins_tile={ins_tile}
+    ins_des={ins_des}
+    ins_link={ins_link}
+    exp_tile={exp_tile}
+    exp_des={exp_des}
+    exp_link={exp_link}
+    />)
 }
-
 export default Work
 
-
-
-const HowitWorks = ({ className }) =>
+const HowitWorks = ({ 
+  title,
+  description,
+  eng_tile,
+  eng_des,
+  eng_link, 
+  ins_tile,
+  ins_des,
+  ins_link,
+  exp_tile,
+  exp_des,
+  exp_link, 
+}) =>
 {
-    var content={
-        title:"HOW IT WORKS",
-        description:"Our AI model helps predict before consumers leave your sites and automatically engages them in real time to convert them into buyers."
-      }
+  
 
-   
-      var eng_tile ="EFFECTIVE ENGAGEMENT"
-      var  eng_des = "Metrical’s solutions serve targeted messaging that has the highest probability of converting and maximizing your margins."
-      var  eng_link =  "VIEW SOLUTIONS "
-      var ins_tile = "DEEPER INSIGHTS"
-      var ins_des ="Metrical uses intelligent customer experience surveys to better understand your website visitors."
-      var ins_link = "EXPLORE INSIGHTS "
-      var exp_tile="OPTIMIZED EXPERIENCE"
-      var  exp_des="Consumer’s behavior and interactions are measured to help you make decisions on how to improve your consumers’ experiences."
-      var exp_link = "STREAMLINE YOUR SITE "
+
 
 return (
 
@@ -97,20 +109,20 @@ return (
          <div class="Work">
            <div class="content">
              <Row >
-         <Col xs={12}>
-      <h3>{content.title}</h3>
-             <p>{content.description}</p>
-             <Img className="laptop" fluid={imageData} alt="" />
-             </Col>
+              <Col xs={12}>
+                <h3>{title}</h3>
+                <p>{description}</p>
+                <Img className="laptop" fluid={imageData} alt="" />
+              </Col>
              </Row>
          <div className="featured">
            <Row>
-         <Col sm={12} md={12} lg={4}>
-         <Featured eng_img={data.engajment.childImageSharp.fluid}
-         eng_tile={eng_tile}
-         eng_des={ eng_des}
-         eng_link={ eng_link}
-         
+            <Col sm={12} md={12} lg={4}>
+            <Featured eng_img={data.engajment.childImageSharp.fluid}
+            eng_tile={eng_tile}
+            eng_des={ eng_des}
+            eng_link={ eng_link}
+            
          />
            </Col>
            <Col sm={12} md={12} lg={4}>
@@ -127,19 +139,12 @@ return (
            eng_des={ exp_des}
            eng_link={exp_link}/>
            </Col>
-       
-           
-
-          
-             </Row>
-             </div>
-             
-            </div>
-             </div>
-    
-           
+       </Row>
+      </div>
       
-      )
+     </div>
+      </div>
+    )
     }}
   />
 )
