@@ -4,9 +4,9 @@ import Header from "../experience/experience_header"
 import { graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-export default function  Experien(){
+export default function  Companies(){
 
-    return(
+return(
 
 <div className="Experience">
 
@@ -58,20 +58,17 @@ const BackgroundSectionExp = ({ className }) =>{
             <Header />
             </div>
             <div className="box">
-<h1>MEASURING WHAT MATTERS.
-    </h1>
-    <p>It is not just data – It’s analyzing and understanding what that data means and how it impacts your business. Metrical’s solutions are continuously looking for signals to engage with your consumers, increasing conversion and experience.</p>
+
+    <p>Metrical is passionately dedicated to improving the e-commerce experiences. Happy, loyal consumers have a value that only increases over time.
+Our journey began a few years ago, when we introduced our intelligent micro-surveys to the world. This focus on improving customer experience paved the way for the creation of our core conversion engine. Since then, we have continued to lead the way by helping our customers leverage innovative technologies to better understand their consumer base.
+We continue to perfect our solutions, expanding our technology to include Artificial Intelligence and other tools that help companies increase their revenues.
+Metrical was founded by industry professionals with a collective 90 years of experience in web and e-commerce.</p>
    
     </div>
    
  
 
-    <div className="box">
-
-    <h1>MEANINGFUL METRICS.</h1>
-    <p>Our dynamic dashboards allow you to follow, in real-time, the behavior and actions of your consumers, giving you exact information to position your business for success.</p>
-
-    </div>
+  
     </>
 
         

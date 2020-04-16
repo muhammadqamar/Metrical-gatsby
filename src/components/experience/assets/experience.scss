@@ -93,3 +93,50 @@
 
 
 }
+
+.Metrical{
+
+  .box{
+    text-align: left !important;
+
+    ul{
+      padding:20px 20px 0px;
+
+      a{
+        color: #535353;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+
+      }
+    }
+  
+
+    h1{
+      text-align:left ;
+    }
+    p{
+      text-align: left;
+      max-width: 100%;
+    }
+
+  }
+
+}
+
+.demo-button-demo{
+
+  display: block;
+  cursor: pointer;
+  border-radius: 6px;
+  border-color: #4559A7;
+  padding: 6px 0px !important;
+  color: #fff !important;
+  font-family: "Nudista";
+  height: 35px;
+  width: 130px;
+  background: linear-gradient(90deg, #374680 17%, #6688b2 50%, #53b3aa 88%);
+  text-align: center;
+  margin:20px auto
+ 
+}

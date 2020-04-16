@@ -4,7 +4,8 @@ import logo from "../../images/logo/logo-white.png"
 import {Link} from "gatsby"
 import Demo from "./demo"
 
-export default function  Navigation_sub(){
+export default function  Navigation_sub({location}){
+ 
 return(
 
 <div className="Navigation Navigation_sub">
@@ -15,9 +16,10 @@ return(
 <Navbar.Collapse id="basic-navbar-nav">
 <Nav className="mr-auto">
 
-<Link to="./conversions">conversions</Link>
-<Link to="./insights">insights</Link>
-<Link to="./experience">experience</Link>
+<Link className={ location.includes("/conversions")?"active_item":null} to="./conversions">conversions</Link>
+<Link className={ location.includes("/insights")?"active_item":null} to="./insights">insights</Link>
+<Link className={ location.includes("/experience")?"active_item":null} to="./experience">experience</Link>
+
 <Link class="chat-button" to="">Chat</Link>
 <Demo  text={"DEMO"}  />
 

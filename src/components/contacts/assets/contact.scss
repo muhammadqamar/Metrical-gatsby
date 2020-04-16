@@ -1,5 +1,14 @@
 .Contactus{
 background-color: #fafafa;
+.mapsize{
+  height: 100%;
+   width: 100%; 
+
+   @media(max-width:767px){
+     height:300px
+   }
+ 
+}
 
   .content{
     max-width:1170px;

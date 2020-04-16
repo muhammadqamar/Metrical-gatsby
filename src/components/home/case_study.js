@@ -13,7 +13,7 @@ return(
 <div className="Case_study">
     <div className="content">
         <h3>{title}</h3>
-        <Link to="">{button_text}</Link>
+        <a  href="Anatomie-Metrical-Case-Study-20190710.pdf" download>{button_text}</a>
         <p>
             {description}
         </p>

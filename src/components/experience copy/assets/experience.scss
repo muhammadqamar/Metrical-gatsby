@@ -34,7 +34,7 @@
   .box{
     max-width: 1170px;
     margin: 0 auto;
-    text-align: center;
+  
     padding: 20px;
     
     h1{
@@ -91,5 +91,19 @@
     }
   }
 
+
+}
+
+
+.Metrical{
+
+  .box{
+    text-align: left !important;
+
+    h1{
+      text-align: left;
+    }
+
+  }
 
 }

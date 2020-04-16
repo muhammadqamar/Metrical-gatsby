@@ -52,7 +52,7 @@ return(
   ins_des ={ content.deeper_insight_description}
   ins_link ={ content.deeper_insight_link_text}
   
-  exp_title ={content.deeper_insight_title} 
+  exp_title ={content.better_experience_title} 
   exp_des ={content.better_experience_description}
   exp_link ={content.better_experience_link_text}
   

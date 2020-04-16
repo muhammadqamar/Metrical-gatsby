@@ -4,8 +4,9 @@ import logo from "../../images/logo/logo.png"
 import {Link} from "gatsby"
 import Demo from "./demo"
 
-export default function  Navigation(){
+export default function  Navigation({location}){
 
+   
 var links=[{
 name:"solutions",
 link:"solutions"
@@ -52,7 +53,12 @@ return(
 return(  
 <>
 {
-data.link==="demo"?<Demo text={"DEMO"} /> :<Link to={"./"+data.link} className={data.link=="chat"?"chat-button":null}>{data.name}</Link> 
+data.link==="demo"?<Demo text={"DEMO"} /> :<Link to={"./"+data.link} 
+id={ location.includes("/"+data.link)?"active":null}
+
+className={data.link=="chat"?"chat-button":null
+
+}>{data.name}</Link> 
 } 
 </>
 )

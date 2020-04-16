@@ -39,8 +39,9 @@ optimzed_experience_link_text: "STREAMLINE YOUR SITE "
 
 
 boosting_revenu_title: "BOOSTING REVENUE ON THE FLY"
-boosting_revenu_description: "“We’ve seen a huge jump in our conversion rate and revenue since we implemented Metrical’s solution. I never expected our revenue to increase by over 30%!”"
-boosting_revenu_link_text: "DOWNLAOD CASE STUDY"
+boosting_revenu_description: "“We’ve seen a huge jump in our conversion rate and revenue since we implemented Metrical’s solution. I never expected our revenue to"
+boosting_revenu_description_bold_text: " increase by over 30%!”"
+boosting_revenu_link_text: "DOWNLOAD CASE STUDY"
 
 
 ---

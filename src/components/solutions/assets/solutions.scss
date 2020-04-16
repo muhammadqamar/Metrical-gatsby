@@ -3,7 +3,7 @@
   .Header_solutions{
     background-image: url("../../../images/product/solution-bg.png");
     background-size: cover;
-   
+   background-position: bottom;
     @media(max-width:992px){
 
    
@@ -115,7 +115,7 @@
       font-weight: 500;
       margin: 0px;
       max-width: 650px;
-      font-size: 20px;
+      font-size: 18px;
   }
 
     }
@@ -160,7 +160,7 @@
 
       &:nth-of-type(2){
         .cont{
-         width:65%;
+         width:55%;
       
           padding-right: 0px;
          }

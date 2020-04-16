@@ -6,16 +6,15 @@ import Navigation_sub from "./navigation_sub"
 import Footer from "./footer"
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Layout ({ children,location="" }){
-    
 
     return(
     
       <>
       {
-          location==="/experience"?<Navigation_sub/>:
-          location==="/conversions"?<Navigation_sub/>:
-          location==="/insights"?<Navigation_sub/>:
-          <Navigation />
+          location.includes("/experience")?<Navigation_sub location={location}  />:
+          location.includes("/conversions")?<Navigation_sub location={location}  />:
+          location.includes("/insights")?<Navigation_sub location={location}  />:
+          <Navigation location={location} />
       }
      
       {children}

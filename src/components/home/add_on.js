@@ -42,7 +42,7 @@ export default function  Addon({
                     </Col>
                     <Col xs={6} sm={6} md={4}>
                     <div className="box">
-                        <img src={video} />
+                        <img src={case_study} />
                         <h2>{data_video_title}
                         <img src={chevron} className="arrow" /></h2>
                         <p>{data_video_description}</p>
@@ -53,7 +53,7 @@ export default function  Addon({
                     </Col>
                     <Col xs={6} sm={6} md={4}>
                     <div className="box">
-                        <img src={case_study} />
+                        <img src={video} />
                         <h2>{data_case_study_title}
                         <img src={chevron} className="arrow" />
                         </h2>

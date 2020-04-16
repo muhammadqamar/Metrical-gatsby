@@ -1,13 +1,13 @@
 import React from "react"
-import Layout from "../components/layout/."
+import Layout from "../components/layout"
 import SEO from "../components/layout/seo"
-import Contacts from "../components/contacts/."
+import Companies from "../components/companies/index"
 import 'bootstrap/dist/css/bootstrap.min.css';
-export default function Contact(props){
+export default function Company(props){
  return(
    <Layout location={props.location.pathname}>
-    <SEO title="Home" />
-    <Contacts />
+    <SEO title="Conversions" />
+    <Companies/>
     </Layout>
  )
 }

@@ -54,7 +54,7 @@ export default function  Contactus(){
               </Col>
 
               <Col xs={12} sm={12} md={6}>
-              <div style={{ height: '100%', width: '100%' }}>
+              <div  className="mapsize">
         <GoogleMapReact
           bootstrapURLKeys={{ key: ""}}
           defaultCenter={defaultProps.center}
