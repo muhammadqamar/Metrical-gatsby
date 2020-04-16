@@ -1,200 +1,168 @@
-.Solutions{
-
-  .Header_solutions{
-    background-image: url("../../../images/product/solution-bg.png");
+.Solutions {
+  .Header_solutions {
+    background-image: url(../../../images/product/bg-over.png),
+      url(../../../images/product/solution.jpg);
+    background-position: center;
     background-size: cover;
-   background-position: bottom;
-    @media(max-width:992px){
-
-   
-  
-     background-position: center;
+    background-position: bottom;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+    @media (max-width: 992px) {
+      background-position: center;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
     }
-  
-
-
-  .content{
-    max-width: 1170px;
-    margin: 0 auto;
-    padding:180px 20px 340px;
-
-    @media(max-width:992px){
-
-   
-  
-      padding: 80px 20px 200px;
+    @media (max-width: 767px) {
+      background-position: center;
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 87%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 87%, 0% 100%);
     }
-  }
 
-  h1{
-    font-size: 65px;
-    line-height: 60px;
-    text-transform: uppercase;
-    color: #fff;
-    font-family: "Nudista";
-    text-shadow: 3px 3px 3px #031b79;
-    max-width: 700px;
-  }
+    .content {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 180px 20px 340px;
 
-  a{
-    color:#fff;
-    text-transform: uppercase;
-    border:1px solid #fff;
-    border-radius: 6px;
-    padding:7px 35px ;
-    margin-top: 25px;
-    display: inline-block;
-    font-family: "Nudista";
-    letter-spacing: 1.5px;
- 
-
-    text-align: center;
-  }
-
-
-  @media (max-width:992px){
-
-   
-  
-
-  
-  
-    h1{
-      font-size:40px !important;
-      line-height:45px !important;
-      
+      @media (max-width: 992px) {
+        padding: 180px 20px 200px;
+      }
     }
-  
-    
-  
-    h2{
-      display: none;
-    }
-   
-  }
-}
 
-.Three_ways{
-  background-image: url(../../../images/product/laptoplayer.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 0% 50%;
-  .content{
-    max-width: 1170px;
-    margin: 0 auto;
-    padding:0px 20px 130px  ;
-  }
-  .each_ways{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-    margin-top: 10px;
-    
-    &:nth-of-type(2){
-      .cont{
-           order:1;
-          width:60%
+    h1 {
+      font-size: 65px;
+      line-height: 60px;
+      text-transform: uppercase;
+      color: #fff;
+      font-family: "Nudista";
+      text-shadow: 3px 3px 3px #031b79;
+      max-width: 700px;
+    }
+
+    a {
+      color: #fff;
+      text-transform: uppercase;
+      border: 1px solid #fff;
+      border-radius: 6px;
+      padding: 7px 35px;
+      margin-top: 25px;
+      display: inline-block;
+      font-family: "Nudista";
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    @media (max-width: 992px) {
+      h1 {
+        font-size: 40px !important;
+        line-height: 45px !important;
       }
 
+      h2 {
+        display: none;
+      }
     }
-    h2{
-
-      color: #4559a7;
-      font-family: "Nudista";
-    
-      font-size: 32px;
-      padding-top: 22px;
-      text-transform: uppercase;
-
-    }
-
-    p{
-      color: #535353;
-      font-family: 'Roboto', sans-serif;
-      padding: 20px  0px;
-      font-weight: 500;
-      margin: 0px;
-      max-width: 650px;
-      font-size: 18px;
   }
 
+  .Three_ways {
+    background-image: url(../../../images/product/laptoplayer.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0% 50%;
+    .content {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 0px 20px 130px;
     }
-    a{
-    padding: 0px 0px;
-      font-family: 'Roboto', sans-serif;
+    .each_ways {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      margin-top: 10px;
+
+      &:nth-of-type(2) {
+        .cont {
+          order: 1;
+          width: 60%;
+        }
+      }
+      h2 {
+        color: #4559a7;
+        font-family: "Nudista";
+
+        font-size: 32px;
+        padding-top: 22px;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: #535353;
+        font-family: "Roboto", sans-serif;
+        padding: 20px 0px;
+        font-weight: 500;
+        margin: 0px;
+        max-width: 650px;
+        font-size: 18px;
+      }
+    }
+    a {
+      padding: 0px 0px;
+      font-family: "Roboto", sans-serif;
       color: #4559a7;
       font-weight: 700;
       font-size: 22px;
-   
-     text-transform: uppercase;
-  
-    
-  }
-  .arrow{
-    width:7px;
-    margin:-3px 0px 0px 5px
-  }
 
-  .each_ways  .cont{
-   width:72%
-  }
-  .each_ways  .pic{
-    width:28%
-   }
-
-   @media (max-width:992px){
-   .content{
-    padding:0px 20px 30px  ;
-   }
-    .each_ways
-
-    {
-     
-      .cont{
-      width:60%;
-      padding-right:30px;
-     }
-      .pic{
-       width:40% !important
-      }
-
-      &:nth-of-type(2){
-        .cont{
-         width:55%;
-      
-          padding-right: 0px;
-         }
-          
-
-      }
-   
+      text-transform: uppercase;
     }
-   
-  }
+    .arrow {
+      width: 7px;
+      margin: -3px 0px 0px 5px;
+    }
 
+    .each_ways .cont {
+      width: 72%;
+    }
+    .each_ways .pic {
+      width: 28%;
+    }
 
-   
-  @media (max-width:767px){
-   
-    .each_ways
-
-    {
-     flex-wrap: wrap-reverse;
-      .cont{
-      width:100%
-     }
-      .pic{
-       width:100% !important
+    @media (max-width: 992px) {
+      .content {
+        padding: 40px 20px 30px;
       }
-      &:nth-of-type(2) .cont {
-        order: 0;
-        width: 100%;
+      .each_ways {
+        .cont {
+          width: 60%;
+          padding-right: 30px;
+        }
+        .pic {
+          width: 40% !important;
+        }
+
+        &:nth-of-type(2) {
+          .cont {
+            width: 55%;
+
+            padding-right: 0px;
+          }
+        }
+      }
     }
+
+    @media (max-width: 767px) {
+      .each_ways {
+        flex-wrap: wrap-reverse;
+        .cont {
+          width: 100%;
+        }
+        .pic {
+          width: 100% !important;
+        }
+        &:nth-of-type(2) .cont {
+          order: 0;
+          width: 100%;
+        }
+      }
     }
-   
   }
-
-
-}
-
 }

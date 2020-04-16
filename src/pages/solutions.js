@@ -7,7 +7,7 @@ export default function Solution(props){
  return(
     <Layout location={props.location.pathname}>
     <SEO title="Home" />
-    <Solutionss/>
+    <Solutionss location={props.location.pathname} />
     </Layout>
  )
 }

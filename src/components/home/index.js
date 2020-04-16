@@ -42,6 +42,7 @@ export default function  Home(){
             optimzed_experience_link_text
             boosting_revenu_title
             boosting_revenu_description
+            boosting_revenu_description_bold_text
           }
         }
       }
@@ -87,6 +88,7 @@ return(
         title={content.boosting_revenu_title}
         description ={content.boosting_revenu_description}
         button_text={content.boosting_revenu_link_text}
+        boldtext={content.boosting_revenu_description_bold_text}
     
     />
 </div>

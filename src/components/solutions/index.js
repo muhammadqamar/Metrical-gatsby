@@ -5,7 +5,7 @@ import Three from "./three_ways"
 import SubMenu from "../layout/submenu"
 import { graphql,useStaticQuery } from "gatsby"
 
-export default function  Solutions(){
+export default function  Solutions({location}){
 // markdown data 
 const query =useStaticQuery(graphql`
 {
@@ -40,7 +40,7 @@ var content= content1[0].node.frontmatter
 return(
 
 <div className="Solutions">
-  <SubMenu />
+  <SubMenu location={location} />
   <Header title={content.soution_header_title} btn={content.soution_header_button_text} />
   <Three
   
