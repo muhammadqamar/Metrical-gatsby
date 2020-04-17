@@ -24,10 +24,29 @@ const BackgroundSectionExp = ({ className }) => {
               }
             }
           }
+          allMarkdownRemark {
+            edges {
+              node {
+                frontmatter {
+                  path
+                  customer_stories_four
+                  customer_stories_one
+                  customer_stories_three
+                  customer_stories_title
+                  customer_stories_two
+                  simple_integeration_description
+                  simple_integeration_title
+                }
+              }
+            }
+          }
         }
       `}
       render={(data) => {
-        // Set ImageData.
+        var content1 = data.allMarkdownRemark.edges.filter(
+          (data) => data.node.frontmatter.path === "/why_metrical"
+        )
+        var content = content1[0].node.frontmatter
 
         return (
           <>
@@ -36,14 +55,14 @@ const BackgroundSectionExp = ({ className }) => {
               <Header />
             </div>
             <div className="box">
-              <h1>CUSTOMER STORIES</h1>
+              <h1>{content.customer_stories_title}</h1>
               <ul>
                 <li>
                   <a
                     href="Anatomie-Metrical-Case-Study-20190710.pdf"
                     download=""
                   >
-                    Anatomie case study
+                    {content.customer_stories_one}
                   </a>
                 </li>
                 <li>
@@ -51,7 +70,7 @@ const BackgroundSectionExp = ({ className }) => {
                     href="Anatomie-Metrical-Case-Study-20190710.pdf"
                     download=""
                   >
-                    S9 case study
+                    {content.customer_stories_two}
                   </a>{" "}
                 </li>
                 <li>
@@ -59,7 +78,7 @@ const BackgroundSectionExp = ({ className }) => {
                     href="Anatomie-Metrical-Case-Study-20190710.pdf"
                     download=""
                   >
-                    BOPIS case study
+                    {content.customer_stories_three}
                   </a>
                 </li>
                 <li>
@@ -67,21 +86,15 @@ const BackgroundSectionExp = ({ className }) => {
                     href="/Anatomie-Metrical-Case-Study-20190710.pdf"
                     download=""
                   >
-                    JCP (if Approved)
+                    {content.customer_stories_four}
                   </a>
                 </li>
               </ul>
             </div>
 
             <div className="box">
-              <h1>SIMPLE INTEGRATION</h1>
-              <p>
-                With built-in APIs and integration support for all of the
-                leading e-commerce platforms, you can get up and running in
-                hours, not weeks. Metrical runs Shopify, Magento, Salesforce
-                CommerceCloud, Oracle, BigCommerce, and more. (include logos at
-                the bottom)
-              </p>
+              <h1>{content.simple_integeration_title}</h1>
+              <p>{content.simple_integeration_description}</p>
             </div>
           </>
         )

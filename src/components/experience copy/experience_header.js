@@ -1,33 +1,27 @@
-import React,{useState} from "react"
+import React, { useState } from "react"
 import "./assets/experience.scss"
-import {Modal,Button} from "react-bootstrap"
+import { Modal, Button } from "react-bootstrap"
 import chevron from "../../images/icons/play.png"
 
-export default function  Experience_header(){
-    const [modalShow, setModalShow] = React.useState(false);
-  
-    return(
-<>
-<div className="Experience_header">
+export default function Experience_header() {
+  const [modalShow, setModalShow] = React.useState(false)
 
-    <div className="playbutton" onClick={() => setModalShow(true)}>
-        <img src={chevron} />
+  return (
+    <>
+      <div className="Experience_header">
+        <div className="playbutton" onClick={() => setModalShow(true)}>
+          <img src={chevron} />
         </div>
-   
-   
-           
-    </div>
+      </div>
       <MyVerticallyCenteredModal
-      show={modalShow}
-      onHide={() => setModalShow(false)}
-    />
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
     </>
+  )
+}
 
-   )
-} 
-
-
-function MyVerticallyCenteredModal(props) {
+export function MyVerticallyCenteredModal(props) {
   return (
     <Modal
       {...props}
@@ -35,14 +29,15 @@ function MyVerticallyCenteredModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-     
       <Modal.Body>
-      <video width="100%" height="auto" controls="true" autoplay="">
-<source src="https://goal-com.000webhostapp.com/metrical-final.mp4" type="video/mp4"/>Your browser does not support the video tag.</video>
- 
+        <video width="100%" height="auto" controls="true" autoplay="">
+          <source
+            src="https://goal-com.000webhostapp.com/metrical-final.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
       </Modal.Body>
-     
     </Modal>
-  );
+  )
 }
-
