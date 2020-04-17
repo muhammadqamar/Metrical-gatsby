@@ -4,6 +4,7 @@ $header_color_primary: #4559a7;
 $paragraph_text_color: #4c4c4d;
 
 .Home {
+
   //
   .Case_study {
     .content {
@@ -41,8 +42,8 @@ $paragraph_text_color: #4c4c4d;
       font-family: "Roboto", sans-serif;
 
       font-weight: 500;
-      font-size: 20px;
-      max-width: 800px;
+      font-size: 22px;
+      max-width: 1000px;
       margin: 0 auto;
       text-align: center;
 
@@ -61,6 +62,7 @@ $paragraph_text_color: #4c4c4d;
       h3 {
         font-size: 30px;
       }
+
       .content {
         padding: 70px 20px 70px;
 
@@ -74,22 +76,98 @@ $paragraph_text_color: #4c4c4d;
   //work
 
   .Work {
-    background-image: url("../../../images/product/laptoplayer.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0% 22%;
+
+
     .content {
       max-width: 1170px;
       margin: 0 auto;
-      padding: 120px 20px 30px;
-      display: table;
+      padding: 120px 20px 15px;
+
+
       @media (max-width: 767px) {
         padding: 120px 20px 30px;
       }
     }
 
+    .bg-laptop {
+      background-color: #f0f0f0;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+
+      margin: 0px;
+      position: relative;
+      z-index: -2;
+
+
+
+
+
+      .content {
+
+        padding: 0px 20px 0px;
+      }
+
+      .name::before {
+        content: "";
+        border: 130px solid #fff;
+        position: absolute;
+        background-color: #fff;
+
+        width: 100%;
+        transform: skewy(-2.5deg);
+        top: -19%;
+        z-index: -1;
+
+        @media(max-width:991px) {
+          border: 60px solid #fff;
+          top: -5%;
+        }
+
+        @media(max-width:550px) {
+          border: 20px solid #fff
+        }
+      }
+
+      .name::after {
+        content: "";
+        border: 120px solid #fff;
+        position: absolute;
+        z-index: 11;
+        background-color: #fff;
+        width: 100%;
+        transform: skewy(-2.5deg);
+        bottom: -19%;
+        z-index: -1;
+
+        @media(max-width:991px) {
+          border: 70px solid #fff;
+          bottom: -5%;
+        }
+
+        @media(max-width:550px) {
+          border: 20px solid #fff;
+          bottom: -5%;
+
+        }
+
+        @media(min-width:4000px) {
+          transform: skewy(-2.5deg);
+          bottom: -20%;
+          border: 150px solid #fff;
+
+
+        }
+
+
+      }
+
+
+    }
+
     .laptop {
       margin: 0px 20px 80px;
+      z-index: 11
     }
 
     h3 {
@@ -106,17 +184,25 @@ $paragraph_text_color: #4c4c4d;
       color: $paragraph_text_color;
 
       font-weight: 500;
-      font-size: 20px;
-      max-width: 700px;
+      font-size: 22px;
+      max-width: 1000px;
       margin: 20px auto 40px;
       text-align: center;
 
-      @media (max-width: 991px) {
+      @media (max-width: 767px) {
         max-width: 100%;
+        font-size: 18px;
+        margin: 20px auto 10px;
       }
     }
 
     .featured {
+
+      .content {
+
+        padding: 20px 20px 20px;
+      }
+
       img {
         padding: 10px;
       }
@@ -139,6 +225,7 @@ $paragraph_text_color: #4c4c4d;
         line-height: 25px;
         font-size: 18px;
       }
+
       a {
         text-align: center;
         font-family: "Roboto", sans-serif;
@@ -157,6 +244,7 @@ $paragraph_text_color: #4c4c4d;
 
         @media (max-width: 991px) {
           min-height: auto;
+
           p,
           a {
             padding-bottom: 20px;
@@ -164,24 +252,29 @@ $paragraph_text_color: #4c4c4d;
         }
       }
     }
+
     .arrow {
       padding: 0px !important;
       width: 7px;
-      margin-top: -4px;
+      margin-top: -2px;
       margin-left: 4px;
     }
+
     @media (max-width: 991px) {
       background-position: 0% 8%;
     }
+
     @media (max-width: 767px) {
       background-position: 0% 19%;
 
       .laptop {
         margin: 0px;
       }
+
       h3 {
         display: block;
       }
+
       .Features {
         padding: 40px 0px 0px;
       }
@@ -190,6 +283,7 @@ $paragraph_text_color: #4c4c4d;
         font-size: 22px !important;
         padding-top: 12px !important;
       }
+
       .autocontent {
         min-height: auto !important;
       }
@@ -212,16 +306,15 @@ $paragraph_text_color: #4c4c4d;
     .box {
       background-color: white;
       box-shadow: 0 5px 20px -2px rgba(0, 0, 0, 0.1);
-      padding: 35px 35px;
+      padding: 35px 25px;
       text-align: center;
-      margin: 0px 35px;
+
       min-height: 300px;
-      &:first-child {
-        margin-left: 0px;
-      }
+
 
       &:hover {
         cursor: pointer;
+
         h2 {
           text-decoration: underline;
         }
@@ -231,9 +324,11 @@ $paragraph_text_color: #4c4c4d;
         padding: 35px 25px;
       }
     }
+
     .imgadjust {
       height: 80px;
     }
+
     img {
       width: 30%;
       height: auto;
@@ -259,12 +354,14 @@ $paragraph_text_color: #4c4c4d;
       margin: 0 auto;
       text-align: center;
     }
+
     .arrow {
       width: 7px !important;
       height: 10px !important;
       margin-left: 5px;
-      margin-top: -5px;
+      margin-top: -2px;
     }
+
     .mobile-work {
       display: none;
     }
@@ -273,9 +370,11 @@ $paragraph_text_color: #4c4c4d;
       .content {
         padding: 0px 0px;
       }
+
       .imgadjust {
         height: 70px;
       }
+
       .box {
         margin: 0px 0px 20px !important;
         min-height: 220px;
@@ -310,9 +409,11 @@ $paragraph_text_color: #4c4c4d;
           line-height: 40px;
           padding-top: 40px;
           display: none;
+
           .imgadjust {
             height: 50px;
           }
+
           img {
             width: 30px;
             height: 20px;
@@ -320,10 +421,12 @@ $paragraph_text_color: #4c4c4d;
             margin: 15px auto;
           }
         }
+
         .col-6 {
           &:nth-of-type(1) {
             padding-right: 5px !important;
           }
+
           &:nth-of-type(2) {
             padding-left: 5px !important;
           }
@@ -331,6 +434,7 @@ $paragraph_text_color: #4c4c4d;
           &:nth-of-type(3) {
             padding-right: 5px !important;
           }
+
           &:nth-of-type(4) {
             padding-left: 5px !important;
           }
@@ -364,10 +468,12 @@ $paragraph_text_color: #4c4c4d;
         color: #fff;
         font-family: "Nudista";
         text-shadow: 3px 3px 3px #031b79;
+
         &:nth-of-type(2) {
           padding-bottom: 30px;
         }
       }
+
       h2 {
         font-size: 28px;
         font-family: "Roboto", sans-serif;
@@ -384,14 +490,17 @@ $paragraph_text_color: #4c4c4d;
         padding: 0px 40px !important;
       }
     }
+
     @media (max-width: 992px) {
       .gatsby-background-image-wrapper {
         padding: 30px 0px;
       }
     }
+
     .gatsby-background-image-wrapper:before {
       background-position: bottom;
     }
+
     @media (max-width: 992px) {
       .gatsby-background-image-wrapper {
         padding: 30px 0px;
@@ -401,6 +510,7 @@ $paragraph_text_color: #4c4c4d;
         .gatsby-background-image-wrapper {
           padding: 0px 0px;
         }
+
         .gatsby-background-image-wrapper:before {
           background-position: bottom;
           background-size: 165% 64%;
@@ -416,11 +526,13 @@ $paragraph_text_color: #4c4c4d;
           font-size: 40px !important;
           line-height: 45px !important;
         }
+
         @media (max-width: 350px) {
           h2 {
             font-size: 12px !important;
           }
         }
+
         h2 {
           display: none;
         }
@@ -434,6 +546,10 @@ $paragraph_text_color: #4c4c4d;
     margin-top: 70px;
     transform: skew(0deg, -5deg);
 
+    @media(max-width:767px) {
+      transform: none
+    }
+
     .collapse-btn {
       width: 80px;
       height: 80px;
@@ -444,6 +560,10 @@ $paragraph_text_color: #4c4c4d;
       justify-content: center;
       align-items: center;
 
+      @media(max-width:767px) {
+        transform: none
+      }
+
       img {
         width: 40px;
         margin: 0 auto;
@@ -451,8 +571,10 @@ $paragraph_text_color: #4c4c4d;
         display: table;
       }
     }
+
     position: relative;
     overflow: hidden;
+
     ul {
       display: flex;
       min-height: 75vh;
@@ -462,12 +584,15 @@ $paragraph_text_color: #4c4c4d;
       overflow: hidden;
       list-style-type: none;
     }
+
     li.active .section-title {
       background-color: $header_color_primary;
     }
+
     li.active {
       padding: 0px !important;
     }
+
     li {
       flex: 0;
       display: flex;
@@ -485,15 +610,16 @@ $paragraph_text_color: #4c4c4d;
       &.active {
         flex: 11;
         background: #fff;
-        cursor: default;
+
 
         .section-content {
           background-image: url(../../../images/product/bg-over.png),
             url(../../../images/product/sliderone.jpg);
           background-size: contain;
-          flex: 6;
+          flex: 9;
           opacity: 1;
           transform: scaleX(1);
+
 
           background-size: cover;
 
@@ -502,6 +628,7 @@ $paragraph_text_color: #4c4c4d;
 
             margin: 0 auto;
           }
+
           @media (max-width: 1400px) {
             img {
               width: 70% !important;
@@ -573,6 +700,7 @@ $paragraph_text_color: #4c4c4d;
     overflow: visible !important;
     margin-top: 20px;
     margin-top: 10px !important;
+
     ul {
       position: relative;
       overflow: visible !important;
@@ -597,6 +725,7 @@ $paragraph_text_color: #4c4c4d;
 
     li.active .section-title {
       padding: 15px 0px !important;
+
     }
 
     .collapse-btn {
@@ -614,9 +743,11 @@ $paragraph_text_color: #4c4c4d;
   .Slider {
     margin-top: 35px !important;
   }
+
   .Slider ul {
     min-height: 50vh !important;
   }
+
   .collapse-btn {
     width: 50px !important;
     height: 50px !important;
@@ -634,12 +765,39 @@ $paragraph_text_color: #4c4c4d;
   z-index: 1111;
   width: 100%;
   transform: skewy(-3.5deg);
+
+  @media (min-width: 2000px) {
+    border: 120px solid #fff;
+    transform: skewy(-3deg);
+    bottom: -25%
+  }
+
+  @media (min-width: 3000px) {
+    border: 120px solid #fff;
+    transform: skewy(-2.5deg);
+    bottom: -20%
+  }
+
+  @media (min-width: 4000px) {
+    border: 120px solid #fff;
+    transform: skewy(-2.5deg);
+    bottom: -17%
+  }
+
+  @media (min-width: 5000px) {
+    border: 140px solid #fff;
+    transform: skewy(-2deg);
+    bottom: -26%
+  }
+
   @media (max-width: 1600px) {
     transform: skewy(-4deg);
   }
+
   @media (max-width: 991px) {
     border: 40px solid #fff;
   }
+
   @media (max-width: 767px) {
     transform: skewy(-5deg);
   }

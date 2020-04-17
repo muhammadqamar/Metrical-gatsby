@@ -56,7 +56,7 @@ const HowitWorks = ({
           laptop: file(relativePath: { eq: "work.png" }) {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_noBase64
               }
             }
           }
@@ -64,7 +64,7 @@ const HowitWorks = ({
           laptopbg: file(relativePath: { eq: "laptoplayer.png" }) {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_noBase64
               }
             }
           }
@@ -72,7 +72,7 @@ const HowitWorks = ({
           engajment: file(relativePath: { eq: "engajment.png" }) {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_noBase64
               }
             }
           }
@@ -80,7 +80,7 @@ const HowitWorks = ({
           insights: file(relativePath: { eq: "insight.png" }) {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_noBase64
               }
             }
           }
@@ -88,7 +88,7 @@ const HowitWorks = ({
           experience: file(relativePath: { eq: "experience.png" }) {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_noBase64
               }
             }
           }
@@ -104,10 +104,24 @@ const HowitWorks = ({
                 <Col xs={12}>
                   <h3>{title}</h3>
                   <p>{description}</p>
-                  <Img className="laptop" fluid={imageData} alt="" />
                 </Col>
               </Row>
-              <div className="featured">
+            </div>
+
+            <div className="bg-laptop">
+              <div className="name">
+                <div className="content">
+                  <Row>
+                    <Col xs={12}>
+                      <Img className="laptop" fluid={imageData} alt="" />
+                    </Col>
+                  </Row>
+                </div>
+              </div>
+            </div>
+
+            <div className="featured">
+              <div class="content">
                 <Row>
                   <Col sm={12} md={12} lg={4}>
                     <Featured

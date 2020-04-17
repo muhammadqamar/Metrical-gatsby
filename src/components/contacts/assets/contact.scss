@@ -3,6 +3,7 @@ $paragraph_text_color: #4c4c4d;
 
 .Contactus {
   background-color: #fafafa;
+
   .mapsize {
     height: 100%;
     width: 100%;
@@ -17,12 +18,14 @@ $paragraph_text_color: #4c4c4d;
     margin: 0 auto;
     padding: 20px 20px 100px;
   }
+
   label {
     color: $paragraph_text_color;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     margin-bottom: 0px;
   }
+
   button {
     text-transform: uppercase;
     width: 100%;

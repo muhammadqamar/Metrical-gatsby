@@ -2,13 +2,24 @@ import React, { useState } from "react"
 import plus from "../../images/icons/plus.png"
 import minus from "../../images/icons/minus.png"
 import bg from "../../images/product/sector9.png"
+
 export default function Slider() {
   const [slide, setslide] = useState("second")
+
+  var changeslider = (e) => {
+    if (e == "first") {
+      setslide("second")
+    } else if (e == "second") {
+      setslide("third")
+    } else if (e == "third") {
+      setslide("first")
+    }
+  }
   return (
-    <div className="Slider">
+    <div className="Slider" slider>
       <ul>
         <li
-          onClick={() => setslide("first")}
+          onClick={() => changeslider("first")}
           className={slide === "first" ? "active" : null}
         >
           <div className="section-title">
@@ -21,7 +32,7 @@ export default function Slider() {
           </div>
         </li>
         <li
-          onClick={() => setslide("second")}
+          onClick={() => changeslider("second")}
           className={slide === "second" ? "active" : null}
         >
           <div className="section-title">
@@ -34,7 +45,7 @@ export default function Slider() {
           </div>
         </li>
         <li
-          onClick={() => setslide("third")}
+          onClick={() => changeslider("third")}
           className={slide === "third" ? "active" : null}
         >
           <div className="section-title">

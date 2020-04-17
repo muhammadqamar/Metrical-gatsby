@@ -10,11 +10,13 @@ $paragraph_text_color: #4c4c4d;
     background-position: bottom;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
     clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+
     @media (max-width: 992px) {
       background-position: center;
       -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
       clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
     }
+
     @media (max-width: 767px) {
       background-position: center;
       -webkit-clip-path: polygon(0 0, 100% 0%, 100% 87%, 0% 100%);
@@ -68,15 +70,36 @@ $paragraph_text_color: #4c4c4d;
   }
 
   .Three_ways {
-    background-image: url(../../../images/product/laptoplayer.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0% 50%;
+
+
+
+
+    &::after {
+      transform: skewy(-5deg);
+      content: "";
+      background-color: #f0f0f0;
+      position: absolute;
+      height: 45%;
+      width: 100vw;
+      border-bottom: 20px solid #f0f0f0;
+      top: 22%;
+      transform: translate(1);
+      z-index: -3;
+
+      @media (max-width:767px) {
+        height: 15%;
+        top: 16%;
+      }
+
+    }
+
+
     .content {
       max-width: 1170px;
       margin: 0 auto;
       padding: 0px 20px 130px;
     }
+
     .each_ways {
       display: flex;
       justify-content: space-between;
@@ -89,6 +112,7 @@ $paragraph_text_color: #4c4c4d;
           width: 60%;
         }
       }
+
       h2 {
         color: $header_color_primary;
         font-family: "Nudista";
@@ -108,6 +132,7 @@ $paragraph_text_color: #4c4c4d;
         font-size: 18px;
       }
     }
+
     a {
       padding: 0px 0px;
       font-family: "Roboto", sans-serif;
@@ -117,6 +142,7 @@ $paragraph_text_color: #4c4c4d;
 
       text-transform: uppercase;
     }
+
     .arrow {
       width: 7px;
       margin: -3px 0px 0px 5px;
@@ -125,6 +151,7 @@ $paragraph_text_color: #4c4c4d;
     .each_ways .cont {
       width: 72%;
     }
+
     .each_ways .pic {
       width: 28%;
     }
@@ -133,11 +160,13 @@ $paragraph_text_color: #4c4c4d;
       .content {
         padding: 40px 20px 30px;
       }
+
       .each_ways {
         .cont {
           width: 60%;
           padding-right: 30px;
         }
+
         .pic {
           width: 40% !important;
         }
@@ -155,12 +184,15 @@ $paragraph_text_color: #4c4c4d;
     @media (max-width: 767px) {
       .each_ways {
         flex-wrap: wrap-reverse;
+
         .cont {
           width: 100%;
         }
+
         .pic {
           width: 100% !important;
         }
+
         &:nth-of-type(2) .cont {
           order: 0;
           width: 100%;

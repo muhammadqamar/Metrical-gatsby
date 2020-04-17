@@ -13,18 +13,18 @@ body {
   background-color: #333333;
 
   .content {
-    max-width: 1400px;
-    padding: 70px 20px 70px;
+
+    padding: 70px 40px 70px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 776px) {
-    }
+    @media (max-width: 776px) {}
 
     ul {
       margin: 0;
       padding: 0px;
+
       li {
         display: inline;
 
@@ -43,6 +43,7 @@ body {
             padding-left: 10px;
           }
         }
+
         &:last-child {
           a:after {
             content: "";
@@ -56,6 +57,7 @@ body {
       padding-top: 15px;
       display: block;
       line-height: 22px;
+
       a {
         color: #fff;
         text-decoration: none;
@@ -73,10 +75,12 @@ body {
     @media (max-width: 767px) {
       flex-direction: column;
       padding: 100px 30px 90px;
+
       .social-images {
         display: flex;
         justify-content: left;
         margin-top: 50px;
+
         img {
           margin-left: 0;
           margin-right: 20px;
@@ -97,6 +101,7 @@ body {
   img {
     width: 235px;
   }
+
   @media (max-width: 991px) {
     padding: 0px 0px;
 
@@ -104,9 +109,11 @@ body {
       width: 170px;
     }
   }
+
   .demo-button-demo {
     display: none;
   }
+
   .navbar-nav {
     flex-basis: 100%;
     justify-content: flex-end;
@@ -126,10 +133,12 @@ body {
         margin-left: 20px;
       }
     }
+
     @media (min-width: 992px) {
       a#active {
         border-bottom: 2px solid $header_color_primary;
       }
+
       a.active_item {
         background-color: #454b66;
         padding: 23px 20px;
@@ -151,10 +160,12 @@ body {
       margin-left: 35px;
       padding-top: 3px;
       text-transform: uppercase;
+
       &:hover {
         background-color: $header_color_primary !important;
         color: #fff;
       }
+
       @media (max-width: 1170px) and (min-width: 991px) {
         margin-left: 20px;
       }
@@ -171,22 +182,22 @@ body {
       text-align: center;
       margin-top: -4px;
 
-      background: linear-gradient(
-        90deg,
-        rgb(55, 70, 128) 17%,
-        rgb(102, 136, 178) 50%,
-        rgb(83, 179, 170) 88%
-      );
+      background: linear-gradient(90deg,
+          rgb(55, 70, 128) 17%,
+          rgb(102, 136, 178) 50%,
+          rgb(83, 179, 170) 88%);
     }
   }
 
   .Demo {
     display: none;
   }
+
   .navbar-nav .Demo,
   .navbar-nav .demo-button-demo {
     display: block;
   }
+
   .demo-button-demo {
     display: block;
     cursor: pointer;
@@ -201,6 +212,7 @@ body {
 
     background: linear-gradient(90deg, #374680 17%, #6688b2 50%, #53b3aa 88%);
     text-align: center;
+
     &:hover {
       background: none !important;
       background-color: $header_color_primary !important;
@@ -213,12 +225,15 @@ body {
       width: 100%;
       display: block;
     }
+
     .navbar-nav .Demo {
       display: none;
     }
+
     #basic-navbar-nav {
       display: none;
     }
+
     .show#basic-navbar-nav {
       position: fixed;
       height: 100vh;
@@ -237,9 +252,11 @@ body {
       @media (max-width: 991px) {
         padding-left: 60%;
       }
+
       @media (max-width: 767px) {
         padding-left: 35%;
       }
+
       .navbar-nav {
         z-index: 1111;
         position: relative;
@@ -249,17 +266,20 @@ body {
         height: 100vh;
         background: $header_color_primary;
         align-items: flex-start;
+
         a {
           color: #fff;
           font-size: 18px;
           padding-bottom: 10px;
           font-weight: 400;
         }
+
         .chat-button {
           display: none;
         }
       }
     }
+
     .demo-button-demo {
       display: block;
 
@@ -276,6 +296,7 @@ body {
       margin-left: 0;
       margin-bottom: 0px;
     }
+
     .chat-button {
       margin: 10px 0px 12px !important;
     }
@@ -293,6 +314,7 @@ body {
       width: 15px;
       height: 15px;
     }
+
     .collapsed .navbar-toggler-icon {
       background-image: url(../../images/icons/BurgerMenu.png) !important;
       position: relative;
@@ -380,6 +402,7 @@ body {
       color: #fff;
     }
   }
+
   @media (max-width: 768px) {
     padding: 20px 20px;
 
@@ -416,6 +439,7 @@ body {
       right: 160px;
     }
   }
+
   .navbar a {
     color: #fff;
   }
@@ -424,6 +448,12 @@ body {
 .Navigation_sub .collapsed .navbar-toggler-icon {
   background-image: url(../../images/icons/white_burger.png) !important;
 }
+
 video {
-  outline: none;
+  outline: none !important;
+}
+
+video,
+.close {
+  outline: none !important;
 }

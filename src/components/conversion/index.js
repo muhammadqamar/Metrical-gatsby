@@ -22,7 +22,7 @@ const BackgroundSectionExp = ({ className }) => {
           banner: file(relativePath: { eq: "experience_banner.jpg" }) {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_noBase64
               }
             }
           }
