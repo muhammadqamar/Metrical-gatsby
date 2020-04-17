@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./assets/contact.scss"
 import GoogleMapReact from "google-map-react"
-
+import axios from "axios"
 import { Row, Col, Form, Button } from "react-bootstrap"
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>
@@ -12,6 +12,7 @@ export default function Contactus() {
   const [message, setmesage] = useState("")
 
   const senddata = () => {}
+
   var defaultProps = {
     center: {
       lat: 59.95,

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Saad Asad <saad@focusteck.com>",
   "dependencies": {
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "gatsby": "^2.15.31",
     "gatsby-background-image": "^1.0.1",
@@ -50,7 +51,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start1": "npm run develop",
     "serve": "gatsby serve",
-    "start": "gatsby serve",
+    "start": "gatsby build",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "repository": {
