@@ -71,8 +71,7 @@ $paragraph_text_color: #4c4c4d;
 
   .Three_ways {
 
-
-
+    position: relative;
 
     &::after {
       transform: skewy(-5deg);
