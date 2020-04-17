@@ -12,14 +12,7 @@ export default function Experien() {
   )
 }
 
-const BackgroundSectionExp = ({ className }) => {
-  var cons_leave_info =
-    "Understanding a consumer’s experience is pivotal to increasing your bottom line.Metrical’s intelligent surveys feed the conversion engine with critical data about why your consumers behave the way they do, and more importantly, why they leave. This data helps mold and shape your messaging so it speaks to each and every consumer."
-  var cons_leave = "WHY ARE CONSUMeRS LEAVING?"
-  var cons_happy = "KNOW HOW TO KEEP CONSUMERS HAPPY."
-  var cons_happy_info =
-    "Just as important as preventing a consumer from leaving is making sure they come back again and again. The experience data and analytics that Metrical provides enables you to make both near and long-term decisions to build loyal, repeat customers."
-
+const BackgroundSectionExp = () => {
   return (
     <StaticQuery
       query={graphql`
@@ -31,10 +24,26 @@ const BackgroundSectionExp = ({ className }) => {
               }
             }
           }
+          allMarkdownRemark {
+            edges {
+              node {
+                frontmatter {
+                  path
+                  consumer_happy_description
+                  consumer_happy_title
+                  what_matters_description
+                  what_matters_title
+                }
+              }
+            }
+          }
         }
       `}
       render={(data) => {
-        // Set ImageData.
+        var content1 = data.allMarkdownRemark.edges.filter(
+          (data) => data.node.frontmatter.path === "/insights"
+        )
+        var content = content1[0].node.frontmatter
 
         return (
           <>
@@ -43,22 +52,13 @@ const BackgroundSectionExp = ({ className }) => {
               <Header />
             </div>
             <div className="box">
-              <h1>MEASURING WHAT MATTERS.</h1>
-              <p>
-                It is not just data – It’s analyzing and understanding what that
-                data means and how it impacts your business. Metrical’s
-                solutions are continuously looking for signals to engage with
-                your consumers, increasing conversion and experience.
-              </p>
+              <h1>{content.what_matters_title}</h1>
+              <p>{content.what_matters_description}</p>
             </div>
 
             <div className="box">
-              <h1>MEANINGFUL METRICS.</h1>
-              <p>
-                Our dynamic dashboards allow you to follow, in real-time, the
-                behavior and actions of your consumers, giving you exact
-                information to position your business for success.
-              </p>
+              <h1>{content.consumer_happy_title}</h1>
+              <p>{content.consumer_happy_description}</p>
             </div>
           </>
         )

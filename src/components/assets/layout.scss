@@ -1,3 +1,8 @@
+//color variable
+
+$header_color_primary: #4559a7;
+$paragraph_text_color: #4c4c4d;
+
 html,
 body {
   margin: 0;
@@ -123,7 +128,7 @@ body {
     }
     @media (min-width: 992px) {
       a#active {
-        border-bottom: 2px solid #4559a7;
+        border-bottom: 2px solid $header_color_primary;
       }
       a.active_item {
         background-color: #454b66;
@@ -136,9 +141,9 @@ body {
     .chat-button {
       color: #445aa8;
       border-radius: 6px;
-      border-color: #4559a7;
+      border-color: $header_color_primary;
 
-      border: 2px solid #4559a7;
+      border: 2px solid $header_color_primary;
       font-family: "Nudista";
       height: 35px;
       width: 130px;
@@ -147,7 +152,7 @@ body {
       padding-top: 3px;
       text-transform: uppercase;
       &:hover {
-        background-color: #4559a7 !important;
+        background-color: $header_color_primary !important;
         color: #fff;
       }
       @media (max-width: 1170px) and (min-width: 991px) {
@@ -157,7 +162,7 @@ body {
 
     #demo-button {
       border-radius: 6px;
-      border-color: #4559a7;
+      border-color: $header_color_primary;
 
       color: #fff;
       font-family: "Nudista";
@@ -187,7 +192,7 @@ body {
     cursor: pointer;
 
     border-radius: 6px;
-    border-color: #4559a7;
+    border-color: $header_color_primary;
     padding: 6px 0px !important;
     color: #fff !important;
     font-family: "Nudista";
@@ -198,7 +203,7 @@ body {
     text-align: center;
     &:hover {
       background: none !important;
-      background-color: #4559a7 !important;
+      background-color: $header_color_primary !important;
       color: #fff;
     }
   }
@@ -242,7 +247,7 @@ body {
         padding: 100px 0px 0px 50px;
         width: 100vw;
         height: 100vh;
-        background: #4559a7;
+        background: $header_color_primary;
         align-items: flex-start;
         a {
           color: #fff;
@@ -318,7 +323,7 @@ body {
 
     h2 {
       text-align: left;
-      color: #4559a7;
+      color: $header_color_primary;
       font-family: "Nudista";
       font-size: 26px;
 
@@ -327,7 +332,7 @@ body {
     }
 
     p {
-      color: #535353;
+      color: $paragraph_text_color;
       font-family: "Roboto", sans-serif;
       padding: 0px 0px;
       font-weight: 500;
@@ -343,7 +348,7 @@ body {
     button {
       text-transform: uppercase;
       width: 100%;
-      background-color: #4559a7;
+      background-color: $header_color_primary;
       font-family: "Nudista";
       letter-spacing: 1px;
       margin-bottom: 20px;
@@ -356,7 +361,7 @@ body {
 }
 
 .SubMenu {
-  background-color: #4559a7;
+  background-color: $header_color_primary;
   padding: 20px 40px;
   margin-bottom: -1px;
 
@@ -386,7 +391,7 @@ body {
 }
 
 .Navigation_sub {
-  background-color: #4559a7;
+  background-color: $header_color_primary;
 
   .navbar-nav {
     justify-content: flex-start;

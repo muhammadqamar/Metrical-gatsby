@@ -1,47 +1,44 @@
-.Contactus{
-background-color: #fafafa;
-.mapsize{
-  height: 100%;
-   width: 100%; 
+$header_color_primary: #4559a7;
+$paragraph_text_color: #4c4c4d;
 
-   @media(max-width:767px){
-     height:300px
-   }
- 
-}
+.Contactus {
+  background-color: #fafafa;
+  .mapsize {
+    height: 100%;
+    width: 100%;
 
-  .content{
-    max-width:1170px;
-    margin:0 auto;
-    padding: 20px 20px 100px;
-
+    @media (max-width: 767px) {
+      height: 300px;
+    }
   }
-  label{
-    color:#6c6d6e;
-    font-family: 'Roboto', sans-serif;
+
+  .content {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 20px 20px 100px;
+  }
+  label {
+    color: $paragraph_text_color;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     margin-bottom: 0px;
-
   }
-  button{
+  button {
     text-transform: uppercase;
-    width:100%;
-    background-color: #4559a7;
+    width: 100%;
+    background-color: $header_color_primary;
     font-family: "Nudista";
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-
-
+    letter-spacing: 1px;
+    margin-bottom: 20px;
   }
 
-  h1{
-  text-align: center;  
-  color: #4559a7;
+  h1 {
+    text-align: center;
+    color: $header_color_primary;
     font-family: "Nudista";
     font-size: 32px;
     padding-top: 22px;
     text-transform: uppercase;
     padding-bottom: 30px;
   }
-  
 }
