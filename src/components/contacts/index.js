@@ -1,10 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 import "./assets/contact.scss"
 import GoogleMapReact from "google-map-react"
 
 import { Row, Col, Form, Button } from "react-bootstrap"
+
 const AnyReactComponent = ({ text }) => <div>{text}</div>
 export default function Contactus() {
+  const [name, setname] = useState("")
+  const [company, setcompany] = useState("")
+  const [email, setemail] = useState("")
+  const [message, setmesage] = useState("")
+
+  const senddata = () => {}
   var defaultProps = {
     center: {
       lat: 59.95,
@@ -21,25 +28,49 @@ export default function Contactus() {
             <Form>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="text" />
+                <Form.Control
+                  type="text"
+                  value={name}
+                  onChange={(e) => {
+                    setname(e.target.value)
+                  }}
+                />
               </Form.Group>
 
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Company</Form.Label>
-                <Form.Control type="text" />
+                <Form.Control
+                  type="text"
+                  value={company}
+                  onChange={(e) => {
+                    setcompany(e.target.value)
+                  }}
+                />
               </Form.Group>
 
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email</Form.Label>
-                <Form.Control type="email" />
+                <Form.Control
+                  value={email}
+                  onChange={(e) => {
+                    setemail(e.target.value)
+                  }}
+                />
               </Form.Group>
 
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" rows="8" />
+                <Form.Control
+                  as="textarea"
+                  rows="8"
+                  value={message}
+                  onChange={(e) => {
+                    setmesage(e.target.value)
+                  }}
+                />
               </Form.Group>
 
-              <Button variant="primary" type="submit">
+              <Button variant="primary" onclick={senddata}>
                 Submit
               </Button>
             </Form>
