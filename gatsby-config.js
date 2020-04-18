@@ -1,3 +1,5 @@
+
+
 module.exports = {
   siteMetadata: {
     title: `Metrical`,
@@ -19,6 +21,16 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `red`,
+        // Disable the loading spinner.
+        showSpinner: true,
+      
+    }
+  },
   
     {
       resolve: `gatsby-source-filesystem`,
