@@ -34,7 +34,7 @@ export default function Contactus() {
     } else {
       axios
 
-        .post("//localhost:3000/contact/", {
+        .post("https://metricalemail.herokuapp.com/contact/", {
           name: name,
           company: company,
           email: email,

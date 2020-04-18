@@ -52,7 +52,7 @@ export default function Addon({
     } else {
       axios
 
-        .post("//localhost:3000/demo/", {
+        .post("https://metricalemail.herokuapp.com/demo/", {
           name: name,
           title: title,
           email: email,
