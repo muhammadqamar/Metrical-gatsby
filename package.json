@@ -52,8 +52,8 @@
     "serve": "gatsby serve",
     
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "heroku-postbuild": "gatsby build",
-    "start": "gatsby serve"
+  
+    "start": "gatsby develop"
   },
   "repository": {
     "type": "git",
