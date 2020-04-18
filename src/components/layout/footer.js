@@ -39,8 +39,14 @@ export default function Footer() {
           </span>
         </div>
         <div className="social-images">
-          <img src={twitter} />
-          <img src={linkedin} />
+          <a href="https://twitter.com/getmetrical" target="_blank">
+            {" "}
+            <img src={twitter} />
+          </a>
+          <a href="https://www.linkedin.com/company/metrical" target="_blank">
+            {" "}
+            <img src={linkedin} />
+          </a>
         </div>
       </div>
     </div>

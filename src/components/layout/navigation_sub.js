@@ -42,9 +42,14 @@ export default function Navigation_sub({ location }) {
                 experience
               </Link>
 
-              <Link class="chat-button" to="">
+              <div
+                class="chat-button"
+                onClick={() => {
+                  window.Chatra("openChat", true)
+                }}
+              >
                 Chat
-              </Link>
+              </div>
               <Demo text={"DEMO"} />
             </Nav>
           </Navbar.Collapse>

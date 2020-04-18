@@ -30,10 +30,13 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.10.2",
     "react-feather": "^2.0.3",
+    "react-form-input-validation": "^2.0.3",
+    "react-form-validator-core": "^0.6.5",
     "react-google-maps": "^9.4.5",
     "react-helmet": "^5.2.1",
     "react-scrollspy": "^3.4.0",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "sweetalert2": "^9.10.12"
   },
   "devDependencies": {
     "bufferutil": "^4.0.1",

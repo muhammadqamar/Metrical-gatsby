@@ -5,8 +5,6 @@ import { Link } from "gatsby"
 import Demo from "./demo"
 
 export default function Navigation({ location }) {
-  const openchatbox = () => {}
-
   var links = [
     {
       name: "solutions",
@@ -51,7 +49,12 @@ export default function Navigation({ location }) {
                     {data.link === "demo" ? (
                       <Demo text={"DEMO"} />
                     ) : data.link === "chat" ? (
-                      <span className="chat-button" onClick={openchatbox}>
+                      <span
+                        className="chat-button"
+                        onClick={() => {
+                          window.Chatra("openChat", true)
+                        }}
+                      >
                         {data.name}{" "}
                       </span>
                     ) : (

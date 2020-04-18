@@ -4,7 +4,6 @@ $header_color_primary: #4559a7;
 $paragraph_text_color: #4c4c4d;
 
 .Home {
-
   //
   .Case_study {
     .content {
@@ -76,13 +75,10 @@ $paragraph_text_color: #4c4c4d;
   //work
 
   .Work {
-
-
     .content {
       max-width: 1170px;
       margin: 0 auto;
       padding: 120px 20px 15px;
-
 
       @media (max-width: 767px) {
         padding: 120px 20px 30px;
@@ -94,17 +90,11 @@ $paragraph_text_color: #4c4c4d;
       background-repeat: no-repeat;
       background-size: cover;
 
-
       margin: 0px;
       position: relative;
       z-index: -2;
 
-
-
-
-
       .content {
-
         padding: 0px 20px 0px;
       }
 
@@ -119,13 +109,13 @@ $paragraph_text_color: #4c4c4d;
         top: -19%;
         z-index: -1;
 
-        @media(max-width:991px) {
+        @media (max-width: 991px) {
           border: 60px solid #fff;
           top: -5%;
         }
 
-        @media(max-width:550px) {
-          border: 20px solid #fff
+        @media (max-width: 550px) {
+          border: 20px solid #fff;
         }
       }
 
@@ -140,34 +130,27 @@ $paragraph_text_color: #4c4c4d;
         bottom: -19%;
         z-index: -1;
 
-        @media(max-width:991px) {
+        @media (max-width: 991px) {
           border: 70px solid #fff;
           bottom: -5%;
         }
 
-        @media(max-width:550px) {
+        @media (max-width: 550px) {
           border: 20px solid #fff;
           bottom: -5%;
-
         }
 
-        @media(min-width:4000px) {
+        @media (min-width: 4000px) {
           transform: skewy(-2.5deg);
           bottom: -20%;
           border: 150px solid #fff;
-
-
         }
-
-
       }
-
-
     }
 
     .laptop {
       margin: 0px 20px 80px;
-      z-index: 11
+      z-index: 11;
     }
 
     h3 {
@@ -197,9 +180,7 @@ $paragraph_text_color: #4c4c4d;
     }
 
     .featured {
-
       .content {
-
         padding: 20px 20px 20px;
       }
 
@@ -300,7 +281,6 @@ $paragraph_text_color: #4c4c4d;
       max-width: 1170px;
       margin: 0 auto;
       padding: 70px 0px;
-      display: table;
     }
 
     .box {
@@ -310,7 +290,6 @@ $paragraph_text_color: #4c4c4d;
       text-align: center;
 
       min-height: 300px;
-
 
       &:hover {
         cursor: pointer;
@@ -546,8 +525,8 @@ $paragraph_text_color: #4c4c4d;
     margin-top: 70px;
     transform: skew(0deg, -5deg);
 
-    @media(max-width:767px) {
-      transform: none
+    @media (max-width: 767px) {
+      transform: none;
     }
 
     .collapse-btn {
@@ -560,8 +539,8 @@ $paragraph_text_color: #4c4c4d;
       justify-content: center;
       align-items: center;
 
-      @media(max-width:767px) {
-        transform: none
+      @media (max-width: 767px) {
+        transform: none;
       }
 
       img {
@@ -611,7 +590,6 @@ $paragraph_text_color: #4c4c4d;
         flex: 11;
         background: #fff;
 
-
         .section-content {
           background-image: url(../../../images/product/bg-over.png),
             url(../../../images/product/sliderbg.png);
@@ -619,7 +597,6 @@ $paragraph_text_color: #4c4c4d;
           flex: 9;
           opacity: 1;
           transform: scaleX(1);
-
 
           background-size: cover;
 
@@ -725,7 +702,6 @@ $paragraph_text_color: #4c4c4d;
 
     li.active .section-title {
       padding: 15px 0px !important;
-
     }
 
     .collapse-btn {
@@ -769,25 +745,25 @@ $paragraph_text_color: #4c4c4d;
   @media (min-width: 2000px) {
     border: 120px solid #fff;
     transform: skewy(-3deg);
-    bottom: -25%
+    bottom: -25%;
   }
 
   @media (min-width: 3000px) {
     border: 120px solid #fff;
     transform: skewy(-2.5deg);
-    bottom: -20%
+    bottom: -20%;
   }
 
   @media (min-width: 4000px) {
     border: 120px solid #fff;
     transform: skewy(-2.5deg);
-    bottom: -17%
+    bottom: -17%;
   }
 
   @media (min-width: 5000px) {
     border: 140px solid #fff;
     transform: skewy(-2deg);
-    bottom: -26%
+    bottom: -26%;
   }
 
   @media (max-width: 1600px) {

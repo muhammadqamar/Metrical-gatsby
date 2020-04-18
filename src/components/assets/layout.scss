@@ -13,13 +13,13 @@ body {
   background-color: #333333;
 
   .content {
-
     padding: 70px 40px 70px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: 776px) {}
+    @media (max-width: 776px) {
+    }
 
     ul {
       margin: 0;
@@ -151,7 +151,7 @@ body {
       color: #445aa8;
       border-radius: 6px;
       border-color: $header_color_primary;
-
+      cursor: pointer;
       border: 2px solid $header_color_primary;
       font-family: "Nudista";
       height: 35px;
@@ -182,10 +182,12 @@ body {
       text-align: center;
       margin-top: -4px;
 
-      background: linear-gradient(90deg,
-          rgb(55, 70, 128) 17%,
-          rgb(102, 136, 178) 50%,
-          rgb(83, 179, 170) 88%);
+      background: linear-gradient(
+        90deg,
+        rgb(55, 70, 128) 17%,
+        rgb(102, 136, 178) 50%,
+        rgb(83, 179, 170) 88%
+      );
     }
   }
 

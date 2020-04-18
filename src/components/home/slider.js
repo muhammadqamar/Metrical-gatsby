@@ -7,16 +7,28 @@ export default function Slider() {
   const [slide, setslide] = useState("second")
 
   var changeslider = (e) => {
-    if (e == "first") {
+    console.log(e, slide)
+    if (e === slide && e === "third") {
       setslide("second")
-    } else if (e == "second") {
-      setslide("third")
-    } else if (e == "third") {
+      return
+    } else if (e === slide && e === "second") {
       setslide("first")
+      return
+    } else if (e === slide && e === "first") {
+      setslide("second")
+      return
+    } else if (e == "first") {
+      setslide("first")
+      return
+    } else if (e == "second") {
+      setslide("second")
+      return
+    } else if (e == "third") {
+      setslide("third")
     }
   }
   return (
-    <div className="Slider" slider>
+    <div className="Slider">
       <ul>
         <li
           onClick={() => changeslider("first")}
