@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState,useEffect } from "react"
 import "./assets/contact.scss"
 import GoogleMapReact from "google-map-react"
 import axios from "axios"
@@ -8,9 +8,12 @@ import "sweetalert2/src/sweetalert2.scss"
 import loader from "../../images/icons/loader.svg"
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>
+
+
 export default function Contactus() {
 
-
+ 
+ 
   const [name, setname] = useState("")
   const [company, setcompany] = useState("")
   const [email, setemail] = useState("")
@@ -192,8 +195,8 @@ export default function Contactus() {
                 defaultZoom={defaultProps.zoom}
               >
                 <AnyReactComponent
-                  lat={59.955413}
-                  lng={30.337844}
+                  lat={process.env.REACT_APP_GOOGLE_MAP_API_LAT}
+                  lng={process.env.REACT_APP_GOOGLE_MAP_API_LANG}
                  
                 />
               </GoogleMapReact>
