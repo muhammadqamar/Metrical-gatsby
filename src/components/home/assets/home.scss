@@ -524,9 +524,15 @@ $paragraph_text_color: #4c4c4d;
   .Slider {
     margin-top: 70px;
     transform: skew(0deg, -5deg);
+    background-image: url(../../../images/product/bg-over.png),
+    url(../../../images/product/sliderbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px 75%;
 
     @media (max-width: 767px) {
       transform: none;
+      background-position: center;
     }
 
     .collapse-btn {
@@ -565,7 +571,10 @@ $paragraph_text_color: #4c4c4d;
     }
 
     li.active .section-title {
-      background-color: $header_color_primary;
+      background-color: #4559a7bf;
+      &:hover{
+          background-color:#454b66;
+      }
     }
 
     li.active {
@@ -577,9 +586,9 @@ $paragraph_text_color: #4c4c4d;
       display: flex;
       align-items: stretch;
       padding: 20px;
-      background: $header_color_primary;
+      background: #4559a7bf;
       cursor: pointer;
-      transition: all 0.5s ease;
+      transition: none !important;
       border-left: 1px solid #fff;
 
       &:hover {
@@ -588,17 +597,16 @@ $paragraph_text_color: #4c4c4d;
 
       &.active {
         flex: 11;
-        background: #fff;
+        background: transparent;
 
         .section-content {
-          background-image: url(../../../images/product/bg-over.png),
-            url(../../../images/product/sliderbg.png);
-          background-size: contain;
+         
+        
           flex: 9;
           opacity: 1;
           transform: scaleX(1);
 
-          background-size: cover;
+         
 
           img {
             height: auto;
