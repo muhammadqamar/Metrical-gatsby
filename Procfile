@@ -1,1 +1,1 @@
-web: npm start --port ${PORT-:9000}
+web: yarn start --port ${PORT-:9000}
