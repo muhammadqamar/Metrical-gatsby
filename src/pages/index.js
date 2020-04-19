@@ -19,6 +19,7 @@ export default function Index(props){
  return(
    <>
    <LoadingOverlay
+ 
    active={loading}
    text="METRICAL"
    spinner={<BounceLoader color={"#fff"} />}
