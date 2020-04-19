@@ -13,7 +13,7 @@ export default function Index(props){
   useEffect(()=>{
     setTimeout(()=>{
       isloading(false)
-    },1000)
+    },1200)
   
   },[])
  return(
