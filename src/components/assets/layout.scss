@@ -462,7 +462,9 @@ video,
 }
 
 
-
+._loading_overlay_overlay {
+  position: fixed !important;
+}
 ._loading_overlay_content{
 display: flex;
 flex-direction: column;
@@ -478,9 +480,8 @@ color:#fff;
 .css-df17o1{
 background:$header_color_primary !important ; 
 width:100vw;
-height:100vh;
-left:50%;
-top:50%;
+
+left:50% !important;
+top:50% !important;
 transform: translate(-50%, -50%);
-position: fixed !important;
 }
