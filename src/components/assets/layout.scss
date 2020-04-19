@@ -471,6 +471,7 @@ flex-direction: column;
 font-size: 30px;
 letter-spacing: 3px;
 font-weight: 600;
+
 color:#fff;
 .css-0{
   order:1
@@ -480,8 +481,10 @@ color:#fff;
 .css-df17o1{
 background:$header_color_primary !important ; 
 width:100vw;
+height:100vh;
+justify-content: center;
+align-items: center;
+display: flex;
 
-left:50% !important;
-top:50% !important;
-transform: translate(-50%, -50%);
+
 }
