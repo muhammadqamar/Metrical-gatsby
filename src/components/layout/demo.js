@@ -86,7 +86,7 @@ export default function Demo({ text }) {
       <Modal show={show} onHide={handleClose} className="modeldemo">
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <h2>Matrical's CART pilot Program</h2>
+          <h2>Metrical's CART pilot Program</h2>
           <p>
             Interested in participating in Metrical's pilot program? Please
             provide the information below and a Metrical team member will be in

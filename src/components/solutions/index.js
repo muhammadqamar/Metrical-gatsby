@@ -47,14 +47,17 @@ return(
   conv_title ={content.rasing_conversion_title}
   conv_des ={content.rasing_conversion_description}
   conv_link ={content.rasing_conversion_link_text}
+  link_red1 = "/conversions"
   
   ins_title ={content.deeper_insight_title}
   ins_des ={ content.deeper_insight_description}
   ins_link ={ content.deeper_insight_link_text}
+  link_red2 = "/insights"
   
   exp_title ={content.better_experience_title} 
   exp_des ={content.better_experience_description}
   exp_link ={content.better_experience_link_text}
+  link_red3 = "/experience"
   
   />
    

@@ -2,6 +2,11 @@ import React from "react"
 import "../experience/assets/experience.scss"
 import Header from "../experience/experience_header"
 import { graphql, StaticQuery } from "gatsby"
+import pdf1 from "../assets/Anatomie-Metrical-Case-Study-20190710.pdf"
+import pdf2 from "../assets/HERO - Metrical Case Study - Sector9_2 20200221.pdf"
+import pdf3 from "../assets/Big Retailer Anonymous - Metrical Case Study.pdf"
+import pdf4 from "../assets/Metrical Case Study - Sector9.pdf"
+
 import Img from "gatsby-image"
 
 export default function Metrical() {
@@ -20,7 +25,7 @@ const BackgroundSectionExp = ({ className }) => {
           banner: file(relativePath: { eq: "experience_banner.jpg" }) {
             childImageSharp {
               fluid(quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -59,32 +64,32 @@ const BackgroundSectionExp = ({ className }) => {
               <ul>
                 <li>
                   <a
-                    href="Anatomie-Metrical-Case-Study-20190710.pdf"
-                    download=""
+                    href={pdf1}
+                    download
                   >
                     {content.customer_stories_one}
                   </a>
                 </li>
                 <li>
                   <a
-                    href="Anatomie-Metrical-Case-Study-20190710.pdf"
-                    download=""
+                         href={pdf2}
+                         download
                   >
                     {content.customer_stories_two}
                   </a>{" "}
                 </li>
                 <li>
                   <a
-                    href="Anatomie-Metrical-Case-Study-20190710.pdf"
-                    download=""
+                          href={pdf3}
+                          download
                   >
                     {content.customer_stories_three}
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/Anatomie-Metrical-Case-Study-20190710.pdf"
-                    download=""
+                           href={pdf4}
+                           download
                   >
                     {content.customer_stories_four}
                   </a>

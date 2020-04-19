@@ -8,6 +8,7 @@ import chevron from "../../images/icons/chevronright.png"
 import angledown from "../../images/icons/angledown.png"
 import loader from "../../images/icons/loader.svg"
 import axios from "axios"
+import pdf from "../assets/Anatomie-Metrical-Case-Study-20190710.pdf"
 
 import Swal from "sweetalert2/dist/sweetalert2.js"
 import { MyVerticallyCenteredModal } from "../experience/experience_header"
@@ -135,11 +136,12 @@ export default function Addon({
                 <div className="imgadjust">
                   <img src={video} />
                 </div>
-                <h2>
+               <a href={pdf} download> <h2>
                   {data_case_study_title}
 
                   <img src={chevron} className="arrow" />
                 </h2>
+                </a>
 
                 <p>{data_case_study_description}</p>
               </div>
@@ -161,7 +163,7 @@ export default function Addon({
       <Modal show={show} onHide={handleClose} className="modeldemo">
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <h2>Matrical's CART pilot Program</h2>
+          <h2>Metrical's CART pilot Program</h2>
           <p>
             Interested in participating in Metrical's pilot program? Please
             provide the information below and a Metrical team member will be in

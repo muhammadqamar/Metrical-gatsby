@@ -6,7 +6,6 @@ export default function Three_ways({
   conv_title,
   conv_des,
   conv_link,
-
   ins_title,
   ins_des,
   ins_link,
@@ -14,6 +13,10 @@ export default function Three_ways({
   exp_title,
   exp_des,
   exp_link,
+
+  link_red1,
+  link_red2,
+  link_red3
 }) {
   return (
     <div className="Three_ways">
@@ -28,6 +31,9 @@ export default function Three_ways({
           exp_title={exp_title}
           exp_des={exp_des}
           exp_link={exp_link}
+          link_red1={link_red1}
+          link_red2={link_red2}
+          link_red3={link_red3}
         />
       </div>
     </div>
@@ -46,6 +52,10 @@ const Graphways = ({
   exp_title,
   exp_des,
   exp_link,
+
+  link_red1,
+  link_red2,
+  link_red3
 }) => {
   return (
     <StaticQuery
@@ -86,12 +96,14 @@ const Graphways = ({
               des={conv_des}
               linktext={conv_link}
               img={data.conversion.childImageSharp.fluid}
+              link_red={link_red1}
             />
             <Way
               title={ins_title}
               des={ins_des}
               linktext={ins_link}
               img={data.insights.childImageSharp.fluid}
+              link_red={link_red2}
             />
 
             <Way
@@ -99,6 +111,7 @@ const Graphways = ({
               des={exp_des}
               linktext={exp_link}
               img={data.experience.childImageSharp.fluid}
+              link_red={link_red3}
             />
           </>
         )

@@ -4,7 +4,7 @@ path: "/homepage"
 homePage_Banner_heading_one: "ARTIFICIAL INTELLIGENCE."
 homePage_Banner_heading_two: "REAL REVENUE."
 homePage_Banner_subheading_one: "Smart targeting and real-time customer"
-homePage_Banner_subheading_two: "engagement give you edge you need."
+homePage_Banner_subheading_two: "engagement give you the edge you need."
 
 
 get_demo_title: "GET DEMO"
@@ -12,7 +12,7 @@ get_demo_description: "Add to your e-commerce platform's app store in one click.
 
 
 watch_video_title: "WATCH VIDEO"
-watch_video_description: "See how we can Increase conversion and reduce cart abandonment" 
+watch_video_description: "See how we can increase conversion and reduce cart abandonment" 
 
 
 view_Case_title: "VIEW CASE STUDY"
@@ -29,7 +29,7 @@ effective_engajment_link_text: "VIEW SOLUTIONS "
 
 
 deeper_insights_title: "DEEPER INSIGHTS"
-deeper_insights_description: "Metrical uses intelligent customer experience surveys to better understand your website visitors."
+deeper_insights_description: "Metrical uses intelligent customer experience surveys to better understand your website's visitors."
 deeper_insights_link_text: "EXPLORE INSIGHTS"
 
 

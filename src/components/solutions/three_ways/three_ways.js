@@ -7,7 +7,8 @@ export default function  each_ways({
     title,
     des,
     linktext,
-    img
+    img,
+    link_red
 }){
 
   
@@ -17,7 +18,7 @@ export default function  each_ways({
     <div className="cont">
 <h2>{title}</h2>
 <p>{des}</p>
-            <Link>
+            <Link to={link_red}>
             {linktext}
             <img src={chevron} className="arrow" />
             </Link>

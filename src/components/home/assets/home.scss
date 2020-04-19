@@ -745,6 +745,7 @@ $paragraph_text_color: #4c4c4d;
 .bg-home-main:after {
   content: "";
   border: 70px solid #ffffff;
+  background:#fff;
   position: absolute;
   z-index: 1111;
   width: 100%;

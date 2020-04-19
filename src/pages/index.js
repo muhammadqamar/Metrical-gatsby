@@ -7,27 +7,32 @@ import LoadingOverlay from 'react-loading-overlay'
 import BounceLoader from 'react-spinners/PulseLoader'
 
 export default function Index(props){
-  const [loadnig, isloading]= useState(true)
+  const [loading, isloading]= useState(true)
   useEffect(()=>{
     setTimeout(()=>{
       isloading(false)
-    },2500)
+    },2000)
   
   },[])
  return(
+   <>
    <LoadingOverlay
-   active={loadnig}
+   active={loading}
+   text="METRICAL"
    spinner={<BounceLoader color={"#fff"} />}
  
    >
 
     
-    <Layout location={props.location.pathname}>
+   
+    </LoadingOverlay>
+
+     {!loading&& <Layout location={props.location.pathname}>
     <SEO title="Home" />
     <Home/>
-    </Layout>
-    </LoadingOverlay>
- )
+    </Layout>}  
+     </>
+)
 }
 
 

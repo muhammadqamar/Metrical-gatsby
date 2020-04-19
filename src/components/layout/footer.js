@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-
+import {Link} from "gatsby"
 import twitter from "../../images/icons/twitter_white.png"
 import linkedin from "../../images/icons/linkedin_white.png"
 
@@ -24,13 +24,13 @@ export default function Footer() {
         <div>
           <ul>
             <li>
-              <a href="/metrical/termsofuses">Terms of use</a>
+              <Link to="/terms_of_use" >Terms of use</Link>
             </li>
             <li>
-              <a href="/metrical/privacypolicy">Privacy Policy</a>
+            <Link to="/privacy_policy" >Privacy Policy</Link>
             </li>
             <li>
-              <a href="/metrical/cookiepolicy">Cookies</a>
+            <Link to="/cookies" >Cookies</Link>
             </li>
           </ul>
           <span>
