@@ -588,7 +588,7 @@ $paragraph_text_color: #4c4c4d;
       padding: 20px;
       background: #4559a7bf;
       cursor: pointer;
-      transition: none !important;
+        transition: all .5s ease;
       border-left: 1px solid #fff;
 
       &:hover {

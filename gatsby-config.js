@@ -24,6 +24,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: ["REACT_APP_GOOGLE_MAP_API_KEY","REACT_APP_GOOGLE_MAP_API_LANG","REACT_APP_GOOGLE_MAP_API_LAT"]
+      },
+    },
+    {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         // Setting a color is optional.

@@ -9,7 +9,10 @@ import BounceLoader from 'react-spinners/PulseLoader'
 export default function Index(props){
   const [loadnig, isloading]= useState(true)
   useEffect(()=>{
-    isloading(false)
+    setTimeout(()=>{
+      isloading(false)
+    },2500)
+  
   },[])
  return(
    <LoadingOverlay
