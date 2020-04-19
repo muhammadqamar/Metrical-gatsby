@@ -1,6 +1,5 @@
 import React from "react"
-import "../assets/layout.scss"
-import "../assets/font.scss"
+
 import Navigation from "./navigation"
 import Navigation_sub from "./navigation_sub"
 import Footer from "./footer"

@@ -5,13 +5,15 @@ import Home from "../components/home/."
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoadingOverlay from 'react-loading-overlay'
 import BounceLoader from 'react-spinners/PulseLoader'
+import "../components/assets/layout.scss"
+import "../components/assets/font.scss"
 
 export default function Index(props){
   const [loading, isloading]= useState(true)
   useEffect(()=>{
     setTimeout(()=>{
       isloading(false)
-    },2000)
+    },1000)
   
   },[])
  return(
