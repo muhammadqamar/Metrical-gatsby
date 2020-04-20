@@ -42,7 +42,7 @@ const BackgroundSectionExp = ({ className }) => {
         var content = content1[0].node.html
 
         return (
-          <div className="Company Cookies">
+          <div className=" privacy">
            
             <div className="box ">
             {renderHTML(content)}
