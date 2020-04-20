@@ -8,7 +8,7 @@ import chevron from "../../images/icons/chevronright.png"
 import angledown from "../../images/icons/angledown.png"
 import loader from "../../images/icons/loader.svg"
 import { useStaticQuery, graphql } from "gatsby"
-import pdf from "../assets/Anatomie-Metrical-Case-Study-20190710.pdf"
+import pdf from "../assets/HERO_Metrical_Case_Study_Sector9_2_20200221.pdf"
 import {apiFetch} from "../layout/api_call.js"
 import {validate} from "../layout/form_validations.js"
 
