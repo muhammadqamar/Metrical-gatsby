@@ -14,7 +14,7 @@ export default function Header({
   data_case_study_description,
 }) {
   return (
-    <div class="bg-home-main">
+    <div className="bg-home-main">
       <div className="contentinner">
         <h1>{heading1}</h1>
         <h1>{heading2}</h1>

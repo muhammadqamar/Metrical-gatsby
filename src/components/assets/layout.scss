@@ -8,7 +8,20 @@ body {
   margin: 0;
 }
 
+.modal{
+
+  padding-left: 0px !important;
+}
+.flex-footer{
+  height:100vh;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  flex-direction: column;
+}
+
 //footer
+
 .Footer {
   background-color: #333333;
 

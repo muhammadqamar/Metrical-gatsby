@@ -1,16 +1,16 @@
 import React, { useState,useEffect } from "react"
 import "./assets/contact.scss"
 import GoogleMapReact from "google-map-react"
-import axios from "axios"
+
 import { Row, Col, Form, Button } from "react-bootstrap"
 import Swal from "sweetalert2/dist/sweetalert2.js"
 import "sweetalert2/src/sweetalert2.scss"
 import loader from "../../images/icons/loader.svg"
-
+import {apiFetch} from "../layout/api_call.js"
+import {validate} from "../layout/form_validations.js"
 const AnyReactComponent = ({ text }) => <div>{text}</div>
 
-
-export default function Contactus() {
+  export default function Contactus() {
 
  
  
@@ -23,41 +23,43 @@ export default function Contactus() {
 
   const [submittext, setbuttontext] = useState("true")
 
-  const validate = (email) => {
-    const expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i
-
-    return expression.test(String(email).toLowerCase())
-  }
-  const senddata = () => {
+ //email send
+  const senddata = async () => {
     showlabel("true")
    
-
-     if (!validate(email)) {
+//email validator
+  if (!validate(email)) {
       setinvalidemail("true")
-    }
-    else if (name === "" || company === "" || email === "" || message === "") 
-    {
+  }
+  //required validator
+  else if (name === "" || company === "" || email === "" || message === "") 
+  {
       return
-    } 
-    else {
+  }
 
+  else {
+     setbuttontext("false")
 
-      setbuttontext("false")
+      //payload
+      const param ={
+        name: name,
+        company: company,
+        email: email,
+        message: message,
       
-      axios
-
-        .post("https://metricalemail.herokuapp.com/contact/", {
-          name: name,
-          company: company,
-          email: email,
-          message: message,
-        })
-        .then(function (response) {
-          console.log(response)
+      }
+      //async function
+    var emailsend_status =  await  apiFetch(process.env.REACT_APP_CONTACT_URL,param)
+        
+   
+    //success
+    if(emailsend_status){
+      
+ 
           setname("")
           setcompany("")
-        setemail("")
-        setmesage("")
+          setemail("")
+          setmesage("")
           setbuttontext("true")
           showlabel("false")
           Swal.fire({
@@ -65,16 +67,17 @@ export default function Contactus() {
             className: "swetalert",
             icon: "success",
           })
-        })
-        .catch(function (error) {
-          console.log(error)
-          setbuttontext("true")
+      }else{
+
+        setbuttontext("true")
           Swal.fire({
             icon: "error",
             title: "Oops...",
             text: "Something went wrong!",
           })
-        })
+      }
+        
+        
     }
   }
 

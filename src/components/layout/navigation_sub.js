@@ -43,7 +43,7 @@ export default function Navigation_sub({ location }) {
               </Link>
 
               <div
-                class="chat-button"
+                className="chat-button"
                 onClick={() => {
                   window.Chatra("openChat", true)
                 }}

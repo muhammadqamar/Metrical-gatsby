@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        whitelist: ["REACT_APP_GOOGLE_MAP_API_KEY","REACT_APP_GOOGLE_MAP_API_LANG","REACT_APP_GOOGLE_MAP_API_LAT"]
+        whitelist: ["REACT_APP_GOOGLE_MAP_API_KEY","REACT_APP_DEMO_URL","REACT_APP_CONTACT_URL","REACT_APP_GOOGLE_MAP_API_LANG","REACT_APP_GOOGLE_MAP_API_LAT"]
       },
     },
     {

@@ -16,9 +16,13 @@ export default function Layout({ children, location = "" }) {
       ) : (
         <Navigation location={location} />
       )}
-
+      <div className={"flex-footer "+ location.split("/")[1]}>
+      <div className="mian-content-inner">
       {children}
+      </div>
+     
       <Footer />
+      </div>
     </>
   )
 }

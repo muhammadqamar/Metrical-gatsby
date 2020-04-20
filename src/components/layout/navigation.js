@@ -59,6 +59,7 @@ export default function Navigation({ location }) {
                       </span>
                     ) : (
                       <Link
+                     
                         to={"./" + data.link}
                         id={
                           location.includes("/" + data.link) ? "active" : null

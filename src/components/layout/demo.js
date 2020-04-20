@@ -2,12 +2,39 @@ import React, { useState } from "react"
 import { Modal, Button, Form } from "react-bootstrap"
 import Swal from "sweetalert2/dist/sweetalert2.js"
 import "sweetalert2/src/sweetalert2.scss"
-import axios from "axios"
+import { useStaticQuery, graphql } from "gatsby"
+
+import {apiFetch} from "./api_call"
+import {validate} from "./form_validations"
 import loader from "../../images/icons/loader.svg"
 export default function Demo({ text }) {
+//qrapgql
+const data = useStaticQuery(graphql`
+  {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            path
+            demo_title
+            demo_description
+          }
+        }
+      }
+    }
+  }`)
+
+
+  var content1 = data.allMarkdownRemark.edges.filter(
+    (data) => data.node.frontmatter.path === "/demo"
+  )
+ 
+  var content = content1[0].node.frontmatter
+
   const [show, setShow] = useState(false)
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
+
 
   const [name, setname] = useState("")
   const [title, settitle] = useState("")
@@ -16,81 +43,80 @@ export default function Demo({ text }) {
   const [labelall,showlabel] = useState("false")
   const [invalidemail,setinvalidemail] = useState("false")
   const [submittext, setbuttontext] = useState("true")
+ 
+  //email sending funciton
+  const senddata = 
+    async ()=>{
+      showlabel("true")
 
-  const validate = (email) => {
-    const expression = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i
-
-    return expression.test(String(email).toLowerCase())
-  }
-  const senddata = () => {
-    showlabel("true")
-    if (!validate(email)) {
-      setinvalidemail("true")
-    }
-    else if (name === "" || title === "" || email === "" || website === "") 
-    {
-      return
-    }  else {
-
-      setbuttontext("false")
-      axios
-
-        .post("https://metricalemail.herokuapp.com/demo", {
+      //validator
+      if (!validate(email)) {
+        setinvalidemail("true")
+      }
+      //validator
+      else if (name === "" || title === "" || email === "" || website === "") 
+      {
+        return
+      } 
+      //send email
+      else{
+        setbuttontext("false")
+        //payload
+        const param ={
           name: name,
           title: title,
           email: email,
           website: website,
-        })
-        .then(function (response) {
-          console.log(response)
-          
-          setbuttontext("true")
+        
+        }
+       //async function
+      var emailsend_status =  await  apiFetch(process.env.REACT_APP_DEMO_URL,param)
+         
+
+      //success
+      if(emailsend_status){
+
+          setbuttontext("true")  
           showlabel("false")
           Swal.fire({
             icon: "success",
             text: "Email Sent",
-           
-       
-        
-           
             confirmButtonText: 'OK'
           }).then((result) => {
             setname("")
             settitle("")
-          setemail("")
-          setwebsite("")
-          handleClose("false")
-          
-           
-           
-          })
+            setemail("")
+            setwebsite("")
+            handleClose("false")
         })
-        .catch(function (error) {
-          console.log(error)
+         
+        }
+         //failed
+        else{
+
           setbuttontext("true")
           Swal.fire({
             icon: "error",
             title: "Oops...",
             text: "Something went wrong!",
           })
-        })
-    }
-  }
+        }
+      } 
+    }  
+   
 
   return (
     <div className="Demo">
-      <a class="demo-button-demo" variant="primary" onClick={handleShow}>
+      <a className="demo-button-demo" variant="primary" onClick={handleShow}>
         {text}
       </a>
 
       <Modal show={show} onHide={handleClose} className="modeldemo">
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <h2>Metrical's CART pilot Program</h2>
+           <h2>{content.demo_title}</h2>
           <p>
-            Interested in participating in Metrical's pilot program? Please
-            provide the information below and a Metrical team member will be in
-            touch shortly!
+          {content.demo_description}
           </p>
           <Form>
             <Form.Group controlId="formBasicEmail">

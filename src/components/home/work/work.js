@@ -98,8 +98,8 @@ const HowitWorks = ({
         // Set ImageData.
         const imageData = data.laptop.childImageSharp.fluid
         return (
-          <div class="Work">
-            <div class="content">
+          <div className="Work">
+            <div className="content">
               <Row>
                 <Col xs={12}>
                   <h3>{title}</h3>
@@ -121,7 +121,7 @@ const HowitWorks = ({
             </div>
 
             <div className="featured">
-              <div class="content">
+              <div className="content">
                 <Row>
                   <Col sm={12} md={12} lg={4}>
                     <Featured
