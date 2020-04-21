@@ -23,15 +23,11 @@ export default function Footer() {
       <div className="content">
         <div>
           <ul>
-            <li>
-              <Link to="/terms_of_use" >Terms of use</Link>
-            </li>
+           
             <li>
             <Link to="/privacy_policy" >Privacy Policy</Link>
             </li>
-            <li>
-            <Link to="/cookies" >Cookies</Link>
-            </li>
+          
           </ul>
           <span>
             © Copyright <a href="/">Metrical</a>, Inc., 2020. All rights
