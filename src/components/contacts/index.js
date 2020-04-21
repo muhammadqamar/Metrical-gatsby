@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import "./assets/contact.scss"
 import GoogleMapReact from "google-map-react"
 import axios from "axios"
@@ -12,14 +12,14 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>
 
 export default function Contactus() {
 
- 
- 
+
+
   const [name, setname] = useState("")
   const [company, setcompany] = useState("")
   const [email, setemail] = useState("")
   const [message, setmesage] = useState("")
-  const [labelall,showlabel] = useState("false")
-  const [invalidemail,setinvalidemail] = useState("false")
+  const [labelall, showlabel] = useState("false")
+  const [invalidemail, setinvalidemail] = useState("false")
 
   const [submittext, setbuttontext] = useState("true")
 
@@ -30,23 +30,22 @@ export default function Contactus() {
   }
   const senddata = () => {
     showlabel("true")
-   
 
-     if (!validate(email)) {
+
+    if (!validate(email)) {
       setinvalidemail("true")
     }
-    else if (name === "" || company === "" || email === "" || message === "") 
-    {
+    else if (name === "" || company === "" || email === "" || message === "") {
       return
-    } 
+    }
     else {
 
 
       setbuttontext("false")
-      
+
       axios
 
-        .post("https://metricalemail.herokuapp.com/contact/", {
+        .post("http://localhost:3001/contactus", {
           name: name,
           company: company,
           email: email,
@@ -56,8 +55,8 @@ export default function Contactus() {
           console.log(response)
           setname("")
           setcompany("")
-        setemail("")
-        setmesage("")
+          setemail("")
+          setmesage("")
           setbuttontext("true")
           showlabel("false")
           Swal.fire({
@@ -94,17 +93,17 @@ export default function Contactus() {
           <Col xs={12} sm={12} md={6}>
             <Form>
               <Form.Group controlId="formBasicEmail">
-                <Form.Label>Name 
+                <Form.Label>Name
                   <span className="validator_text">
-                  
-                  {
-                    labelall==="true"&&name===""?" Required":null
-                  }
-                 
 
-                  </span> 
-                  </Form.Label>
-                
+                    {
+                      labelall === "true" && name === "" ? " Required" : null
+                    }
+
+
+                  </span>
+                </Form.Label>
+
                 <Form.Control
                   type="text"
                   name="name"
@@ -118,12 +117,12 @@ export default function Contactus() {
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Company
                 <span className="validator_text">
-                  
-                  {
-                    labelall==="true"&&company===""?" Required":null
-                  }
 
-                  </span> 
+                    {
+                      labelall === "true" && company === "" ? " Required" : null
+                    }
+
+                  </span>
                 </Form.Label>
                 <Form.Control
                   type="text"
@@ -137,15 +136,15 @@ export default function Contactus() {
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email
                 <span className="validator_text">
-                  
-                  {
-                    labelall==="true"&&email===""?" Required":null
-                  }
-                   {
-                    invalidemail==="true"&& labelall!="false"?" - invalid email":null
-                  }
 
-                  </span> 
+                    {
+                      labelall === "true" && email === "" ? " Required" : null
+                    }
+                    {
+                      invalidemail === "true" && labelall != "false" ? " - invalid email" : null
+                    }
+
+                  </span>
 
                 </Form.Label>
                 <Form.Control
@@ -161,12 +160,12 @@ export default function Contactus() {
                 <Form.Label>Message
 
                 <span className="validator_text">
-                  
-                  {
-                    labelall==="true"&&message===""?" Required":null
-                  }
 
-                  </span> 
+                    {
+                      labelall === "true" && message === "" ? " Required" : null
+                    }
+
+                  </span>
 
                 </Form.Label>
                 <Form.Control
@@ -178,10 +177,10 @@ export default function Contactus() {
                   }}
                 />
               </Form.Group>
-              
+
 
               <Button onClick={senddata} variant="primary">
-                {submittext=="true"?"SUBMIT":<img src={loader} className="emailsent"/>}
+                {submittext == "true" ? "SUBMIT" : <img src={loader} className="emailsent" />}
               </Button>
             </Form>
           </Col>
@@ -198,7 +197,7 @@ export default function Contactus() {
                 <AnyReactComponent
                   lat={process.env.REACT_APP_GOOGLE_MAP_API_LAT}
                   lng={process.env.REACT_APP_GOOGLE_MAP_API_LANG}
-                 
+
                 />
               </GoogleMapReact>
             </div>

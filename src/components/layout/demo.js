@@ -13,8 +13,8 @@ export default function Demo({ text }) {
   const [title, settitle] = useState("")
   const [email, setemail] = useState("")
   const [website, setwebsite] = useState("")
-  const [labelall,showlabel] = useState("false")
-  const [invalidemail,setinvalidemail] = useState("false")
+  const [labelall, showlabel] = useState("false")
+  const [invalidemail, setinvalidemail] = useState("false")
   const [submittext, setbuttontext] = useState("true")
 
   const validate = (email) => {
@@ -27,15 +27,14 @@ export default function Demo({ text }) {
     if (!validate(email)) {
       setinvalidemail("true")
     }
-    else if (name === "" || title === "" || email === "" || website === "") 
-    {
+    else if (name === "" || title === "" || email === "" || website === "") {
       return
-    }  else {
+    } else {
 
       setbuttontext("false")
       axios
 
-        .post("https://metricalemail.herokuapp.com/demo", {
+        .post("http://localhost:3001/requestdemo", {
           name: name,
           title: title,
           email: email,
@@ -43,26 +42,26 @@ export default function Demo({ text }) {
         })
         .then(function (response) {
           console.log(response)
-          
+
           setbuttontext("true")
           showlabel("false")
           Swal.fire({
             icon: "success",
             text: "Email Sent",
-           
-       
-        
-           
+
+
+
+
             confirmButtonText: 'OK'
           }).then((result) => {
             setname("")
             settitle("")
-          setemail("")
-          setwebsite("")
-          handleClose("false")
-          
-           
-           
+            setemail("")
+            setwebsite("")
+            handleClose("false")
+
+
+
           })
         })
         .catch(function (error) {
@@ -95,14 +94,14 @@ export default function Demo({ text }) {
           <Form>
             <Form.Group controlId="formBasicEmail">
               <Form.Label>
-                Name 
+                Name
                 <span className="validator_text">
-                  
+
                   {
-                    labelall==="true"&&name===""?" Required":null
+                    labelall === "true" && name === "" ? " Required" : null
                   }
 
-                  </span> 
+                </span>
               </Form.Label>
               <Form.Control
                 type="text"
@@ -117,10 +116,10 @@ export default function Demo({ text }) {
             <Form.Group controlId="formBasicEmail">
               <Form.Label>
                 Title    <span className="validator_text">
-                {
-                    labelall==="true"&&title===""?" Required":null
+                  {
+                    labelall === "true" && title === "" ? " Required" : null
                   }
-                  </span>
+                </span>
 
               </Form.Label>
               <Form.Control
@@ -135,12 +134,12 @@ export default function Demo({ text }) {
 
             <Form.Group controlId="formBasicEmail">
               <Form.Label>
-                Your e-Commerce Website 
+                Your e-Commerce Website
                 <span className="validator_text">
-               
-                {
-                  labelall==="true"&&website===""?" Required":null
-                }
+
+                  {
+                    labelall === "true" && website === "" ? " Required" : null
+                  }
                 </span>
               </Form.Label>
               <Form.Control
@@ -155,17 +154,17 @@ export default function Demo({ text }) {
 
             <Form.Group controlId="formBasicEmail">
               <Form.Label>
-                Email  
-                
+                Email
+
                 <span className="validator_text">
-                {
-                    labelall==="true"&&email===""?" Required":null
+                  {
+                    labelall === "true" && email === "" ? " Required" : null
                   }
-                   {
-                    invalidemail==="true"&& labelall!="false"?" - invalid email":null
+                  {
+                    invalidemail === "true" && labelall != "false" ? " - invalid email" : null
                   }
 
-                  </span>
+                </span>
               </Form.Label>
               <Form.Control
                 type="email"
@@ -179,7 +178,7 @@ export default function Demo({ text }) {
             </Form.Group>
 
             <Button variant="primary" onClick={senddata}>
-            {submittext=="true"?"SUBMIT":<img src={loader} className="emailsent"/>}
+              {submittext == "true" ? "SUBMIT" : <img src={loader} className="emailsent" />}
             </Button>
           </Form>
         </Modal.Body>
