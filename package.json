@@ -53,6 +53,8 @@
     "develop": "env-cmd -f .env-local gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start_dev": "env-cmd -f .env-dev gatsby develop ",
+    "deploy": "gatsby-plugin-s3 deploy",
+    "build-deploy": "env-cmd -f .env gatsby build && gatsby-plugin-s3 deploy",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "heroku-postbuild": "gatsby build",

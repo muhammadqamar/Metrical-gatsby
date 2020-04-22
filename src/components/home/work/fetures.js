@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
-import chevron from "../../../images/icons/chevronright.png"
+import React from "react";
+import { Link } from "gatsby";
+import Img from "gatsby-image";
+import chevron from "../../../images/icons/chevronright.png";
 export default function Features({
   eng_img,
   eng_tile,
@@ -26,5 +26,5 @@ export default function Features({
         </Link>
       </div>
     </div>
-  )
+  );
 }

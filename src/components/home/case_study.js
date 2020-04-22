@@ -1,5 +1,5 @@
-import React from "react"
-import pdf from "../assets/Anatomie-Metrical-Case-Study-20190710.pdf"
+import React from "react";
+import pdf from "../assets/HERO_Metrical_Case_Study_Sector9_2_20200221.pdf";
 
 export default function Case_study({
   title,
@@ -19,5 +19,5 @@ export default function Case_study({
         </p>
       </div>
     </div>
-  )
+  );
 }

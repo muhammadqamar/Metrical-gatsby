@@ -1,8 +1,8 @@
-import React from "react"
-import { Navbar, Nav } from "react-bootstrap"
-import logo from "../../images/logo/logo.png"
-import { Link } from "gatsby"
-import Demo from "./demo"
+import React from "react";
+import { Navbar, Nav } from "react-bootstrap";
+import logo from "../../images/logo/logo.png";
+import { Link } from "gatsby";
+import Demo from "./demo";
 
 export default function Navigation({ location }) {
   var links = [
@@ -30,7 +30,7 @@ export default function Navigation({ location }) {
       name: "demo",
       link: "demo",
     },
-  ]
+  ];
   return (
     <div className="Navigation">
       <div className="Content">
@@ -52,7 +52,7 @@ export default function Navigation({ location }) {
                       <span
                         className="chat-button"
                         onClick={() => {
-                          window.Chatra("openChat", true)
+                          window.Chatra("openChat", true);
                         }}
                       >
                         {data.name}{" "}
@@ -69,7 +69,7 @@ export default function Navigation({ location }) {
                       </Link>
                     )}
                   </>
-                )
+                );
               })}
             </Nav>
           </Navbar.Collapse>
@@ -77,5 +77,5 @@ export default function Navigation({ location }) {
         </Navbar>
       </div>
     </div>
-  )
+  );
 }

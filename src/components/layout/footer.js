@@ -1,36 +1,30 @@
-import React, { useEffect } from "react"
-import {Link} from "gatsby"
-import twitter from "../../images/icons/twitter_white.png"
-import linkedin from "../../images/icons/linkedin_white.png"
+import React, { useEffect } from "react";
+import { Link } from "gatsby";
+import twitter from "../../images/icons/twitter_white.png";
+import linkedin from "../../images/icons/linkedin_white.png";
 
 export default function Footer() {
   useEffect(() => {
-    ;(function (d, w, c) {
-      w.ChatraID = "jhZnb9xzQPx4cpPAD"
-      var s = d.createElement("script")
+    (function (d, w, c) {
+      w.ChatraID = "jhZnb9xzQPx4cpPAD";
+      var s = d.createElement("script");
       w[c] =
         w[c] ||
         function () {
-          ;(w[c].q = w[c].q || []).push(arguments)
-        }
-      s.async = true
-      s.src = "https://call.chatra.io/chatra.js"
-      if (d.head) d.head.appendChild(s)
-    })(document, window, "Chatra")
-  }, [])
+          (w[c].q = w[c].q || []).push(arguments);
+        };
+      s.async = true;
+      s.src = "https://call.chatra.io/chatra.js";
+      if (d.head) d.head.appendChild(s);
+    })(document, window, "Chatra");
+  }, []);
   return (
     <div className="Footer">
       <div className="content">
         <div>
           <ul>
             <li>
-              <Link to="/terms_of_use" >Terms of use</Link>
-            </li>
-            <li>
-            <Link to="/privacy_policy" >Privacy Policy</Link>
-            </li>
-            <li>
-            <Link to="/cookies" >Cookies</Link>
+              <Link to="/privacy_policy">Privacy Policy</Link>
             </li>
           </ul>
           <span>
@@ -50,5 +44,5 @@ export default function Footer() {
         </div>
       </div>
     </div>
-  )
+  );
 }

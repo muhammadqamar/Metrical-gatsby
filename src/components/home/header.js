@@ -1,6 +1,6 @@
-import React from "react"
-import Addon from "./add_on"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import Addon from "./add_on";
+import { useStaticQuery, graphql } from "gatsby";
 export default function Header({
   heading1,
   heading2,
@@ -14,7 +14,7 @@ export default function Header({
   data_case_study_description,
 }) {
   return (
-    <div class="bg-home-main">
+    <div className="bg-home-main">
       <div className="contentinner">
         <h1>{heading1}</h1>
         <h1>{heading2}</h1>
@@ -32,5 +32,5 @@ export default function Header({
         />
       </div>
     </div>
-  )
+  );
 }

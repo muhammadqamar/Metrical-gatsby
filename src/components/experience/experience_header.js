@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import "./assets/experience.scss"
-import { Modal, Button } from "react-bootstrap"
-import chevron from "../../images/icons/play.png"
+import React, { useState } from "react";
+import "./assets/experience.scss";
+import { Modal, Button } from "react-bootstrap";
+import chevron from "../../images/icons/play.png";
 
 export default function Experience_header() {
-  const [modalShow, setModalShow] = React.useState(false)
+  const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <>
@@ -18,7 +18,7 @@ export default function Experience_header() {
         onHide={() => setModalShow(false)}
       />
     </>
-  )
+  );
 }
 
 export function MyVerticallyCenteredModal(props) {
@@ -39,5 +39,5 @@ export function MyVerticallyCenteredModal(props) {
         </video>
       </Modal.Body>
     </Modal>
-  )
+  );
 }

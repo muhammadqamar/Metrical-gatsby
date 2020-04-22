@@ -1,15 +1,15 @@
-import React from "react"
-import "../experience/assets/experience.scss"
+import React from "react";
+import "../experience/assets/experience.scss";
 
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby";
 
-import renderHTML from 'react-render-html';
+import renderHTML from "react-render-html";
 export default function Private() {
   return (
     <div className="Experience">
       <BackgroundSectionExp />
     </div>
-  )
+  );
 }
 
 const BackgroundSectionExp = ({ className }) => {
@@ -18,13 +18,11 @@ const BackgroundSectionExp = ({ className }) => {
       var
       query={graphql`
         query {
-        
           allMarkdownRemark {
             edges {
               node {
                 frontmatter {
                   path
-                  
                 }
                 html
               }
@@ -34,23 +32,19 @@ const BackgroundSectionExp = ({ className }) => {
       `}
       render={(data) => {
         // Set ImageData.
-     
+
         var content1 = data.allMarkdownRemark.edges.filter(
           (data) => data.node.frontmatter.path === "/privacy"
-        )
-        console.log(content1)
-        var content = content1[0].node.html
+        );
+
+        var content = content1[0].node.html;
 
         return (
-          <div className="Company Cookies">
-           
-            <div className="box ">
-            {renderHTML(content)}
-            </div>
-            </div>
-          
-        )
+          <div className=" privacy">
+            <div className="box ">{renderHTML(content)}</div>
+          </div>
+        );
       }}
     />
-  )
-}
+  );
+};

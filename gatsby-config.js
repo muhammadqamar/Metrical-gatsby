@@ -28,10 +28,12 @@ module.exports = {
           "REACT_APP_GOOGLE_MAP_API_KEY",
           "REACT_APP_GOOGLE_MAP_API_LANG",
           "REACT_APP_GOOGLE_MAP_API_LAT",
+          "REACT_APP_DEMO_URL",
+          "REACT_APP_CONTACT_URL",
           "REACT_APP_S3_DEPLOYMENT_BUCKET",
           "AWS_ACCESS_KEY_ID",
-          "AWS_SECRET_ACCESS_KEY"
-        ]
+          "AWS_SECRET_ACCESS_KEY",
+        ],
       },
     },
     {
@@ -41,8 +43,7 @@ module.exports = {
         color: `#4559a7`,
         // Disable the loading spinner.
         showSpinner: false,
-
-      }
+      },
     },
 
     {
@@ -84,11 +85,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: process.env.REACT_APP_S3_DEPLOYMENT_BUCKET
-      }
-    }
+        bucketName: process.env.REACT_APP_S3_DEPLOYMENT_BUCKET,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
