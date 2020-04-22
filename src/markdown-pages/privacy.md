@@ -1,8 +1,6 @@
 ---
 path: "/privacy"
-
 ---
-
 
 <div class="field-item even">
     <h1>METRICAL PRIVACY POLICY</h1>

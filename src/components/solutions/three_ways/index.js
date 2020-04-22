@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 
-import Way from "./three_ways"
-import { graphql, StaticQuery } from "gatsby"
+import Way from "./three_ways";
+import { graphql, StaticQuery } from "gatsby";
 export default function Three_ways({
   conv_title,
   conv_des,
@@ -16,7 +16,7 @@ export default function Three_ways({
 
   link_red1,
   link_red2,
-  link_red3
+  link_red3,
 }) {
   return (
     <div className="Three_ways">
@@ -37,7 +37,7 @@ export default function Three_ways({
         />
       </div>
     </div>
-  )
+  );
 }
 
 const Graphways = ({
@@ -55,7 +55,7 @@ const Graphways = ({
 
   link_red1,
   link_red2,
-  link_red3
+  link_red3,
 }) => {
   return (
     <StaticQuery
@@ -114,8 +114,8 @@ const Graphways = ({
               link_red={link_red3}
             />
           </>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};

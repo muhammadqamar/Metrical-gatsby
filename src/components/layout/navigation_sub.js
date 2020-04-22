@@ -1,8 +1,8 @@
-import React from "react"
-import { Navbar, Nav } from "react-bootstrap"
-import logo from "../../images/logo/logo-white.png"
-import { Link } from "gatsby"
-import Demo from "./demo"
+import React from "react";
+import { Navbar, Nav } from "react-bootstrap";
+import logo from "../../images/logo/logo-white.png";
+import { Link } from "gatsby";
+import Demo from "./demo";
 
 export default function Navigation_sub({ location }) {
   return (
@@ -45,7 +45,7 @@ export default function Navigation_sub({ location }) {
               <div
                 className="chat-button"
                 onClick={() => {
-                  window.Chatra("openChat", true)
+                  window.Chatra("openChat", true);
                 }}
               >
                 Chat
@@ -58,5 +58,5 @@ export default function Navigation_sub({ location }) {
         </Navbar>
       </div>
     </div>
-  )
+  );
 }

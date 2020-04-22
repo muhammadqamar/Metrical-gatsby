@@ -1,9 +1,9 @@
-import React from "react"
-import { graphql, StaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
-import Featured from "./fetures"
+import React from "react";
+import { graphql, StaticQuery, Link } from "gatsby";
+import Img from "gatsby-image";
+import Featured from "./fetures";
 
-import { Row, Col } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap";
 
 const Work = ({
   title,
@@ -32,9 +32,9 @@ const Work = ({
       exp_des={exp_des}
       exp_link={exp_link}
     />
-  )
-}
-export default Work
+  );
+};
+export default Work;
 
 const HowitWorks = ({
   title,
@@ -96,7 +96,7 @@ const HowitWorks = ({
       `}
       render={(data) => {
         // Set ImageData.
-        const imageData = data.laptop.childImageSharp.fluid
+        const imageData = data.laptop.childImageSharp.fluid;
         return (
           <div className="Work">
             <div className="content">
@@ -154,8 +154,8 @@ const HowitWorks = ({
               </div>
             </div>
           </div>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};

@@ -1,20 +1,20 @@
-import React from "react"
-import "../experience/assets/experience.scss"
-import Header from "../experience/experience_header"
-import { graphql, StaticQuery } from "gatsby"
-import pdf1 from "../assets/Anatomie_Metrical_Case_Study_20190710.pdf"
-import pdf2 from "../assets/HERO_Metrical_Case_Study_Sector9_2_20200221.pdf"
-import pdf3 from "../assets/Big_Retailer_Anonymous_Metrical_Case_Study.pdf"
-import pdf4 from "../assets/Metrical_Case_Study_Sector9.pdf"
+import React from "react";
+import "../experience/assets/experience.scss";
+import Header from "../experience/experience_header";
+import { graphql, StaticQuery } from "gatsby";
+import pdf1 from "../assets/Anatomie_Metrical_Case_Study_20190710.pdf";
+import pdf2 from "../assets/HERO_Metrical_Case_Study_Sector9_2_20200221.pdf";
+import pdf3 from "../assets/Big_Retailer_Anonymous_Metrical_Case_Study.pdf";
+import pdf4 from "../assets/Metrical_Case_Study_Sector9.pdf";
 
-import Img from "gatsby-image"
+import Img from "gatsby-image";
 
 export default function Metrical() {
   return (
     <div className="Experience Metrical">
       <BackgroundSectionExp />
     </div>
-  )
+  );
 }
 
 const BackgroundSectionExp = ({ className }) => {
@@ -50,8 +50,8 @@ const BackgroundSectionExp = ({ className }) => {
       render={(data) => {
         var content1 = data.allMarkdownRemark.edges.filter(
           (data) => data.node.frontmatter.path === "/why_metrical"
-        )
-        var content = content1[0].node.frontmatter
+        );
+        var content = content1[0].node.frontmatter;
 
         return (
           <>
@@ -63,34 +63,22 @@ const BackgroundSectionExp = ({ className }) => {
               <h1>{content.customer_stories_title}</h1>
               <ul>
                 <li>
-                  <a
-                    href={pdf1}
-                    download
-                  >
+                  <a href={pdf1} download>
                     {content.customer_stories_one}
                   </a>
                 </li>
                 <li>
-                  <a
-                         href={pdf2}
-                         download
-                  >
+                  <a href={pdf2} download>
                     {content.customer_stories_two}
                   </a>{" "}
                 </li>
                 <li>
-                  <a
-                          href={pdf3}
-                          download
-                  >
+                  <a href={pdf3} download>
                     {content.customer_stories_three}
                   </a>
                 </li>
                 <li>
-                  <a
-                           href={pdf4}
-                           download
-                  >
+                  <a href={pdf4} download>
                     {content.customer_stories_four}
                   </a>
                 </li>
@@ -102,8 +90,8 @@ const BackgroundSectionExp = ({ className }) => {
               <p>{content.simple_integeration_description}</p>
             </div>
           </>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};

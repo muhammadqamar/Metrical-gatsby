@@ -1,15 +1,15 @@
-import React from "react"
-import "../experience/assets/experience.scss"
-import Header from "../experience/experience_header"
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from "react";
+import "../experience/assets/experience.scss";
+import Header from "../experience/experience_header";
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
 export default function Experien() {
   return (
     <div className="Experience">
       <BackgroundSectionExp />
     </div>
-  )
+  );
 }
 
 const BackgroundSectionExp = () => {
@@ -42,8 +42,8 @@ const BackgroundSectionExp = () => {
       render={(data) => {
         var content1 = data.allMarkdownRemark.edges.filter(
           (data) => data.node.frontmatter.path === "/insights"
-        )
-        var content = content1[0].node.frontmatter
+        );
+        var content = content1[0].node.frontmatter;
 
         return (
           <>
@@ -61,8 +61,8 @@ const BackgroundSectionExp = () => {
               <p>{content.consumer_happy_description}</p>
             </div>
           </>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};

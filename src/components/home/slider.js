@@ -1,32 +1,32 @@
-import React, { useState } from "react"
-import plus from "../../images/icons/plus.png"
-import minus from "../../images/icons/minus.png"
-import bg from "../../images/product/sector9.png"
+import React, { useState } from "react";
+import plus from "../../images/icons/plus.png";
+import minus from "../../images/icons/minus.png";
+import bg from "../../images/product/sector9.png";
 
 export default function Slider() {
-  const [slide, setslide] = useState("second")
+  const [slide, setslide] = useState("second");
 
   var changeslider = (e) => {
-    console.log(e, slide)
+
     if (e === slide && e === "third") {
-      setslide("second")
-      return
+      setslide("second");
+      return;
     } else if (e === slide && e === "second") {
-      setslide("first")
-      return
+      setslide("first");
+      return;
     } else if (e === slide && e === "first") {
-      setslide("second")
-      return
+      setslide("second");
+      return;
     } else if (e == "first") {
-      setslide("first")
-      return
+      setslide("first");
+      return;
     } else if (e == "second") {
-      setslide("second")
-      return
+      setslide("second");
+      return;
     } else if (e == "third") {
-      setslide("third")
+      setslide("third");
     }
-  }
+  };
   return (
     <div className="Slider">
       <ul>
@@ -71,5 +71,5 @@ export default function Slider() {
         </li>
       </ul>
     </div>
-  )
+  );
 }
