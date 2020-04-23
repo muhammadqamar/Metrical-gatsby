@@ -6,6 +6,7 @@ import pdf1 from "../assets/Anatomie_Metrical_Case_Study_20190710.pdf";
 import pdf2 from "../assets/HERO_Metrical_Case_Study_Sector9_2_20200221.pdf";
 import pdf3 from "../assets/Big_Retailer_Anonymous_Metrical_Case_Study.pdf";
 import pdf4 from "../assets/Metrical_Case_Study_Sector9.pdf";
+import {Row,Col} from "react-bootstrap"
 
 import Img from "gatsby-image";
 
@@ -23,6 +24,35 @@ const BackgroundSectionExp = ({ className }) => {
       query={graphql`
         query {
           banner: file(relativePath: { eq: "experience_banner.jpg" }) {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          big: file(relativePath: { eq: "big.jpg" }) {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+
+          mag: file(relativePath: { eq: "magento.jpg" }) {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          oracle: file(relativePath: { eq: "oracle.png" }) {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          sales: file(relativePath: { eq: "sales.png" }) {
             childImageSharp {
               fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
@@ -89,6 +119,24 @@ const BackgroundSectionExp = ({ className }) => {
               <h1>{content.simple_integeration_title}</h1>
               <p>{content.simple_integeration_description}</p>
             </div>
+            <div className="logos metrical">
+              <Row>
+                <Col xs={6} md={3}>
+              <Img fluid={data.big.childImageSharp.fluid} />
+              </Col>
+              <Col xs={6} md={3}>
+              <Img fluid={data.mag.childImageSharp.fluid} />
+              </Col>
+              <Col xs={6} md={3}>
+              <Img fluid={data.oracle.childImageSharp.fluid} />
+              </Col>
+              <Col xs={6} md={3}>
+                <Img fluid={data.sales.childImageSharp.fluid} />
+                </Col>
+                </Row>
+             
+
+              </div>
           </>
         );
       }}

@@ -41,7 +41,7 @@ $paragraph_text_color: #4c4c4d;
       font-family: "Roboto", sans-serif;
 
       font-weight: 500;
-      font-size: 22px;
+      font-size: 25px;
       max-width: 1000px;
       margin: 0 auto;
       text-align: center;
@@ -167,7 +167,7 @@ $paragraph_text_color: #4c4c4d;
       color: $paragraph_text_color;
 
       font-weight: 500;
-      font-size: 22px;
+      font-size: 29px;
       max-width: 1000px;
       margin: 20px auto 40px;
       text-align: center;
@@ -785,6 +785,7 @@ $paragraph_text_color: #4c4c4d;
 
   @media (max-width: 767px) {
     transform: skewy(-5deg);
+    border: 45px solid #fff;
   }
 
   bottom: -10%;

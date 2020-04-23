@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./assets/contact.scss";
-import GoogleMapReact from "google-map-react";
+import  map from "../../images/product/map.png"
 
 import { Row, Col, Form, Button } from "react-bootstrap";
 import Swal from "sweetalert2/dist/sweetalert2.js";
@@ -168,18 +168,8 @@ export default function Contactus() {
 
           <Col xs={12} sm={12} md={6}>
             <div className="mapsize">
-              <GoogleMapReact
-                bootstrapURLKeys={{
-                  key: process.env.REACT_APP_GOOGLE_MAP_API_KEY,
-                }}
-                defaultCenter={defaultProps.center}
-                defaultZoom={defaultProps.zoom}
-              >
-                <AnyReactComponent
-                  lat={process.env.REACT_APP_GOOGLE_MAP_API_LAT}
-                  lng={process.env.REACT_APP_GOOGLE_MAP_API_LANG}
-                />
-              </GoogleMapReact>
+              <img src={map} />
+
             </div>
           </Col>
         </Row>

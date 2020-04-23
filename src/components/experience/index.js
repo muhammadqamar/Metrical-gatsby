@@ -13,17 +13,24 @@ export default function Experien() {
 }
 
 const BackgroundSectionExp = ({ className }) => {
-  var cons_leave_info =
-    "Understanding a consumer’s experience is pivotal to increasing your bottom line.Metrical’s intelligent surveys feed the conversion engine with critical data about why your consumers behave the way they do, and more importantly, why they leave. This data helps mold and shape your messaging so it speaks to each and every consumer.";
-  var cons_leave = "WHY ARE CONSUMeRS LEAVING?";
-  var cons_happy = "KNOW HOW TO KEEP CONSUMERS HAPPY.";
-  var cons_happy_info =
-    "Just as important as preventing a consumer from leaving is making sure they come back again and again. The experience data and analytics that Metrical provides enables you to make both near and long-term decisions to build loyal, repeat customers.";
 
   return (
     <StaticQuery
       query={graphql`
         query {
+          allMarkdownRemark {
+            edges {
+              node {
+                frontmatter {
+                  consumer_happy_title
+            consumer_happy_description
+            consumer_leaving_description
+            consumer_leaving_tite
+            path
+                }
+              }
+            }
+          }
           desktop: file(relativePath: { eq: "experience_bg.png" }) {
             childImageSharp {
               fluid(quality: 100) {
@@ -44,6 +51,10 @@ const BackgroundSectionExp = ({ className }) => {
       render={(data) => {
         // Set ImageData.
         const imageData = data.desktop.childImageSharp.fluid;
+        var content1 = data.allMarkdownRemark.edges.filter(
+          (data) => data.node.frontmatter.path === "/experience"
+        );
+        var content = content1[0].node.frontmatter;
         return (
           <>
             <div className="relativepath">
@@ -51,15 +62,15 @@ const BackgroundSectionExp = ({ className }) => {
               <Header />
             </div>
             <div className="box">
-              <h1>{cons_leave}</h1>
-              <p>{cons_leave_info}</p>
+              <h1>{content.consumer_leaving_title}</h1>
+              <p>{content.consumer_leaving_description}</p>
             </div>
 
             <Img fluid={imageData} src="" />
 
             <div className="box">
-              <h1>{cons_happy}</h1>
-              <p>{cons_happy_info}</p>
+              <h1>{content.consumer_happy_title}</h1>
+              <p>{content.consumer_happy_description}</p>
             </div>
           </>
         );
