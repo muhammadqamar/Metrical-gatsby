@@ -124,13 +124,13 @@ const BackgroundSectionExp = ({ className }) => {
                 <Col xs={6} md={3}>
               <Img fluid={data.big.childImageSharp.fluid} />
               </Col>
-              <Col xs={6} md={3}>
+              <Col xs={6} md={3}  className="check even">
               <Img fluid={data.mag.childImageSharp.fluid} />
               </Col>
               <Col xs={6} md={3}>
               <Img fluid={data.oracle.childImageSharp.fluid} />
               </Col>
-              <Col xs={6} md={3}>
+              <Col xs={6} md={3} >
                 <Img fluid={data.sales.childImageSharp.fluid} />
                 </Col>
                 </Row>
