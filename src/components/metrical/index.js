@@ -7,8 +7,9 @@ import pdf2 from "../assets/HERO_Metrical_Case_Study_Sector9_2_20200221.pdf";
 import pdf3 from "../assets/Big_Retailer_Anonymous_Metrical_Case_Study.pdf";
 import pdf4 from "../assets/Metrical_Case_Study_Sector9.pdf";
 import {Row,Col} from "react-bootstrap"
-
+import CaseStudy from "../home/case_study.js"
 import Img from "gatsby-image";
+import Slider from "../home/slider.js";
 
 export default function Metrical() {
   return (
@@ -71,6 +72,10 @@ const BackgroundSectionExp = ({ className }) => {
                   customer_stories_two
                   simple_integeration_description
                   simple_integeration_title
+                  boosting_revenu_description_bold_text
+                  boosting_revenu_description
+                  boosting_revenu_title
+                  boosting_revenu_link_text
                 }
               }
             }
@@ -78,10 +83,17 @@ const BackgroundSectionExp = ({ className }) => {
         }
       `}
       render={(data) => {
+
         var content1 = data.allMarkdownRemark.edges.filter(
           (data) => data.node.frontmatter.path === "/why_metrical"
         );
+        var content2 = data.allMarkdownRemark.edges.filter(
+          (data) => data.node.frontmatter.path === "/homepage"
+        );
         var content = content1[0].node.frontmatter;
+        var contentCase = content2[0].node.frontmatter;
+
+
 
         return (
           <>
@@ -90,35 +102,16 @@ const BackgroundSectionExp = ({ className }) => {
               <Header />
             </div>
             <div className="box">
-              <h1>{content.customer_stories_title}</h1>
-              <ul>
-                <li>
-                  <a href={pdf1} download>
-                    {content.customer_stories_one}
-                  </a>
-                </li>
-                <li>
-                  <a href={pdf2} download>
-                    {content.customer_stories_two}
-                  </a>{" "}
-                </li>
-                <li>
-                  <a href={pdf3} download>
-                    {content.customer_stories_three}
-                  </a>
-                </li>
-                <li>
-                  <a href={pdf4} download>
-                    {content.customer_stories_four}
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="box">
               <h1>{content.simple_integeration_title}</h1>
               <p>{content.simple_integeration_description}</p>
             </div>
+            <div className="Home">
+      <Slider />
+      </div>
+
+
+      
+           
             <div className="logos metrical">
               <Row>
                 <Col xs={6} md={3}>

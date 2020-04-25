@@ -26,7 +26,7 @@ body {
   background-color: #333333;
 
   .content {
-    padding: 70px 40px 70px;
+    padding: 90px 40px 100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -504,4 +504,15 @@ display: flex;
 
 .header--offline{
   background-color: red !important;
+}
+
+.emailfooter{
+  color:#fff;
+  display: block;
+  padding-top: 25px;
+  text-align: right;
+  font-size: 16px;
+  &:hover{
+    color:#fff !important
+  }
 }

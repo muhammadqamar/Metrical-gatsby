@@ -48,6 +48,7 @@ export default function Footer() {
             {" "}
             <img src={linkedin} />
           </a>
+          <a  className="emailfooter" href="mailto:hello@metric.al">hello@metric.al</a>
         </div>
       </div>
     </div>

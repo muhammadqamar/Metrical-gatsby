@@ -190,7 +190,7 @@ $paragraph_text_color: #4c4c4d;
 
 .logos.metrical{
   max-width: 1170px;
-  margin: 0 auto;
+  margin: 60px auto 0px;
   text-align: center;
   padding: 20px;
 
@@ -210,4 +210,14 @@ $paragraph_text_color: #4c4c4d;
       }
     }
    
+}
+
+.close-video{
+  text-align: right;
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover{
+      color:$header_color_primary
+    }
 }

@@ -282,6 +282,12 @@ $paragraph_text_color: #4c4c4d;
       margin: 0 auto;
       padding: 70px 0px;
     }
+    .row{
+      @media (max-width:767px){
+        justify-content: center;
+
+      }
+    }
 
     .box {
       background-color: white;
@@ -425,8 +431,8 @@ $paragraph_text_color: #4c4c4d;
   //HEADER{
 
   .HEADER {
-    background-image: url(../../../images/product/home-bg.jpg);
-    background-position: 100% 15%;
+    background-image: url(../../../images/product/hero-v2a.jpg);
+
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -791,3 +797,5 @@ $paragraph_text_color: #4c4c4d;
   bottom: -10%;
   z-index: 0;
 }
+
+
