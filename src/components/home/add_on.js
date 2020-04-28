@@ -167,19 +167,14 @@ export default function Addon({
                 <p>{data_case_study_description}</p>
               </div>
             </Col>
-            <Col xs={6} sm={6} md={4}>
-              <div className="mobile-work">
-                How it
-                <br /> works
-                <img src={angledown} />
-              </div>
-            </Col>
+         
           </Row>
         </div>
       </div>
       <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}
+        closebox={setModalShow}
       />
       <Modal show={show} onHide={handleClose} className="modeldemo">
         <Modal.Header closeButton></Modal.Header>
