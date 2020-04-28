@@ -193,4 +193,21 @@ $paragraph_text_color: #4c4c4d;
   margin: 0 auto;
   text-align: center;
   padding: 20px;
+
+  .check.even {
+
+   
+      margin-top: -23px;
+
+
+      @media (max-width:991px) {
+        margin-top: -15px;
+        
+      }
+      @media (max-width:767px) {
+        margin-top: -20px;
+        
+      }
+    }
+   
 }
