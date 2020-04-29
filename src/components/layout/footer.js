@@ -1,33 +1,38 @@
-import React, { useEffect } from "react"
-import {Link} from "gatsby"
-import twitter from "../../images/icons/twitter_white.png"
-import linkedin from "../../images/icons/linkedin_white.png"
+import React, { useEffect } from "react";
+import { Link } from "gatsby";
+import twitter from "../../images/icons/twitter_white.png";
+import linkedin from "../../images/icons/linkedin_white.png";
 
 export default function Footer() {
   useEffect(() => {
-    ;(function (d, w, c) {
-      w.ChatraID = "jhZnb9xzQPx4cpPAD"
-      var s = d.createElement("script")
+    (function (d, w, c) {
+      w.ChatraID = "jhZnb9xzQPx4cpPAD";
+      var s = d.createElement("script");
       w[c] =
         w[c] ||
         function () {
-          ;(w[c].q = w[c].q || []).push(arguments)
-        }
-      s.async = true
-      s.src = "https://call.chatra.io/chatra.js"
-      if (d.head) d.head.appendChild(s)
-    })(document, window, "Chatra")
-  }, [])
+          (w[c].q = w[c].q || []).push(arguments);
+        };
+      s.async = true;
+      s.src = "https://call.chatra.io/chatra.js";
+      if (d.head) d.head.appendChild(s);
+    })(document, window, "Chatra");
+
+    window.ChatraSetup = {
+      colors: {
+          buttonText: '#f0f0f0', /* chat button text color */
+          buttonBg: '#445AA5'    /* chat button background color */
+      }
+  };
+  }, []);
   return (
     <div className="Footer">
       <div className="content">
         <div>
           <ul>
-           
             <li>
-            <Link to="/privacy_policy" >Privacy Policy</Link>
+              <Link to="/privacy_policy">Privacy Policy</Link>
             </li>
-          
           </ul>
           <span>
             © Copyright <a href="/">Metrical</a>, Inc., 2020. All rights
@@ -43,8 +48,9 @@ export default function Footer() {
             {" "}
             <img src={linkedin} />
           </a>
+          <a  className="emailfooter" href="mailto:hello@metric.al">hello@metric.al</a>
         </div>
       </div>
     </div>
-  )
+  );
 }

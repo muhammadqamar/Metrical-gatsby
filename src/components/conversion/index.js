@@ -1,16 +1,16 @@
-import React from "react"
-import "../experience/assets/experience.scss"
-import Header from "../experience/experience_header"
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import DEMO from "../layout/demo"
+import React from "react";
+import "../experience/assets/experience.scss";
+import Header from "../experience/experience_header";
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import DEMO from "../layout/demo";
 
 export default function Conversion() {
   return (
     <div className="Experience Conversion">
       <BackgroundSectionExp />
     </div>
-  )
+  );
 }
 
 const BackgroundSectionExp = ({ className }) => {
@@ -49,8 +49,8 @@ const BackgroundSectionExp = ({ className }) => {
       render={(data) => {
         var content1 = data.allMarkdownRemark.edges.filter(
           (data) => data.node.frontmatter.path === "/conversions"
-        )
-        var content = content1[0].node.frontmatter
+        );
+        var content = content1[0].node.frontmatter;
         return (
           <>
             <div className="relativepath">
@@ -83,8 +83,8 @@ const BackgroundSectionExp = ({ className }) => {
               <DEMO text="GET A DEMO" />
             </div>
           </>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};
