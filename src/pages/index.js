@@ -12,8 +12,8 @@ export default function Index(props) {
   const [loading, isloading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
-      //   isloading(false);
-    }, 1500);
+      isloading(false);
+    }, 1000);
   }, []);
   return (
     <>
