@@ -2,12 +2,9 @@ import React from "react";
 import "../experience/assets/experience.scss";
 import Header from "../experience/experience_header";
 import { graphql, StaticQuery } from "gatsby";
-import pdf1 from "../assets/Anatomie_Metrical_Case_Study_20190710.pdf";
-import pdf2 from "../assets/HERO_Metrical_Case_Study_Sector9_2_20200221.pdf";
-import pdf3 from "../assets/Big_Retailer_Anonymous_Metrical_Case_Study.pdf";
-import pdf4 from "../assets/Metrical_Case_Study_Sector9.pdf";
-import {Row,Col} from "react-bootstrap"
-import CaseStudy from "../home/case_study.js"
+
+import { Row, Col } from "react-bootstrap";
+import CaseStudy from "../home/case_study.js";
 import Img from "gatsby-image";
 import Slider from "../home/slider.js";
 
@@ -83,7 +80,6 @@ const BackgroundSectionExp = ({ className }) => {
         }
       `}
       render={(data) => {
-
         var content1 = data.allMarkdownRemark.edges.filter(
           (data) => data.node.frontmatter.path === "/why_metrical"
         );
@@ -92,8 +88,6 @@ const BackgroundSectionExp = ({ className }) => {
         );
         var content = content1[0].node.frontmatter;
         var contentCase = content2[0].node.frontmatter;
-
-
 
         return (
           <>
@@ -105,31 +99,29 @@ const BackgroundSectionExp = ({ className }) => {
               <h1>{content.simple_integeration_title}</h1>
               <p>{content.simple_integeration_description}</p>
             </div>
-            <div className="Home">
-      <Slider />
-      </div>
 
-
-      
-           
             <div className="logos metrical">
               <Row>
                 <Col xs={6} md={3}>
-              <Img fluid={data.big.childImageSharp.fluid} />
-              </Col>
-              <Col xs={6} md={3}  className="check even">
-              <Img fluid={data.mag.childImageSharp.fluid} />
-              </Col>
-              <Col xs={6} md={3}>
-              <Img fluid={data.oracle.childImageSharp.fluid} />
-              </Col>
-              <Col xs={6} md={3} >
-                <Img fluid={data.sales.childImageSharp.fluid} />
+                  <Img fluid={data.big.childImageSharp.fluid} />
                 </Col>
-                </Row>
-             
-
-              </div>
+                <Col xs={6} md={3} className="check even">
+                  <Img fluid={data.mag.childImageSharp.fluid} />
+                </Col>
+                <Col xs={6} md={3}>
+                  <Img fluid={data.oracle.childImageSharp.fluid} />
+                </Col>
+                <Col xs={6} md={3}>
+                  <Img fluid={data.sales.childImageSharp.fluid} />
+                </Col>
+              </Row>
+            </div>
+            <div className="box check">
+              <h1>CASE STUDIES</h1>
+            </div>
+            <div className="Home">
+              <Slider />
+            </div>
           </>
         );
       }}

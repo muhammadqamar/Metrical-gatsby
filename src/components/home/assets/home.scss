@@ -4,6 +4,7 @@ $header_color_primary: #4559a7;
 $paragraph_text_color: #4c4c4d;
 
 .Home {
+
   //
   .Case_study {
     .content {
@@ -282,8 +283,9 @@ $paragraph_text_color: #4c4c4d;
       margin: 0 auto;
       padding: 70px 0px;
     }
-    .row{
-      @media (max-width:767px){
+
+    .row {
+      @media (max-width:767px) {
         justify-content: center;
 
       }
@@ -531,14 +533,40 @@ $paragraph_text_color: #4c4c4d;
     margin-top: 70px;
     transform: skew(0deg, -5deg);
     background-image: url(../../../images/product/bg-over.png),
-    url(../../../images/product/sliderbg.png);
+      url(../../../images/product/sliderbg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0px 75%;
 
+    .anotomy_img {
+      border: 20px solid #fff
+    }
+
     @media (max-width: 767px) {
       transform: none;
       background-position: center;
+
+      .anotomy_img {
+        border: 10px solid #fff
+      }
+    }
+
+    @media (max-width: 991px) {
+
+      .anotomy_img {
+        border: 13px solid #fff
+      }
+    }
+
+
+
+    a {
+      width: 100%;
+
+      img {
+        margin: 0 auto;
+        display: block
+      }
     }
 
     .collapse-btn {
@@ -578,8 +606,9 @@ $paragraph_text_color: #4c4c4d;
 
     li.active .section-title {
       background-color: #4559a7bf;
-      &:hover{
-          background-color:#454b66;
+
+      &:hover {
+        background-color: #454b66;
       }
     }
 
@@ -594,7 +623,7 @@ $paragraph_text_color: #4c4c4d;
       padding: 20px;
       background: #4559a7bf;
       cursor: pointer;
-        transition: all .5s ease;
+      transition: all .5s ease;
       border-left: 1px solid #fff;
 
       &:hover {
@@ -606,13 +635,13 @@ $paragraph_text_color: #4c4c4d;
         background: transparent;
 
         .section-content {
-         
-        
+
+
           flex: 9;
           opacity: 1;
           transform: scaleX(1);
 
-         
+
 
           img {
             height: auto;
@@ -751,7 +780,7 @@ $paragraph_text_color: #4c4c4d;
 .bg-home-main:after {
   content: "";
   border: 70px solid #ffffff;
-  background:#fff;
+  background: #fff;
   position: absolute;
   z-index: 1111;
   width: 100%;
@@ -797,5 +826,3 @@ $paragraph_text_color: #4c4c4d;
   bottom: -10%;
   z-index: 0;
 }
-
-
