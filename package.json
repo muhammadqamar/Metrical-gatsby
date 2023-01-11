@@ -24,7 +24,7 @@
     "gatsby-source-filesystem": "^2.1.29",
     "gatsby-source-googlemaps-geocoding": "^1.0.0",
     "gatsby-source-googlemaps-static": "^1.1.1",
-    "gatsby-transformer-remark": "^2.7.1",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.2.20",
     "google-map-react": "^1.1.7",
     "node-sass": "^4.13.1",
